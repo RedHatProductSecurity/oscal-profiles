@@ -1,0 +1,30 @@
+name: Regenerate profile content
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'profiles/**'
+      - 'catalogs/**'
+
+jobs:
+  update:
+    name: Regenerate content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Regenerate profiles
+        run: make regenerate-profiles
+      - name: Update and PR
+        run: bash ./vendor/scripts/update.sh "Sync OSCAL profiles"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

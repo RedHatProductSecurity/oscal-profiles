@@ -1,0 +1,23 @@
+name: Update content from upstream FedRAMP content
+
+on: workflow_dispatch
+
+jobs:
+  update:
+    name: Run update
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Update FedRAMP
+        run: bash ./vendor/scripts/update-fedramp.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
