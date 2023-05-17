@@ -1,0 +1,22 @@
+all: build
+.PHONY: all
+
+
+# Include the library makefile
+include ./reports.mk
+# All the available targets can be listed using `make help`
+
+
+TEMPLATE := "my-template.jinja"
+
+generate-gap-report:
+	$(call gap-report,my_ssp,my_prof,$(TEMPLATE))
+.PHONY: generate-gap-report
+
+generate-customer-report:
+	$(call customer-report,my_ssp,my_prof,$(TEMPLATE))
+.PHONY: generate-customer-report
+
+generate-auditing-report:
+	$(call auditing-report,my_ssp,my_prof,$(TEMPLATE))
+.PHONY: generate-auditing-report
