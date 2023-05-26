@@ -1,0 +1,8 @@
+# Include the library makefile
+include ./regenerate.mk
+# All the available targets can be listed using `make help`
+
+
+SKIP_COMPONENTS := "comp_a" "comp_b"
+SKIP_CATALOG := "my_catalog"
+SKIP_PROFILES := "my_profile"
