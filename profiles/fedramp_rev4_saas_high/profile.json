@@ -1,0 +1,88 @@
+{
+    "profile": {
+        "uuid": "c3b5a4fb-6fbb-45b0-a68d-17d38c0c0dac",
+        "title": "FedRAMP Rev 4 High Baseline - SaaS Profile",
+        "last-modified": "2023-05-25T00:00:00Z",
+        "version": "1.0.0",
+        "oscal-version": "1.0.0",
+        "metadata": {
+            "title": "FedRAMP Rev4 High Baseline - SaaS Profile",
+            "last-modified": "2023-05-25",
+            "version": "1.0",
+            "oscal-version": "1.0.0"
+        },
+        "imports": [
+            {
+                "href": "trestle://catalogs/nist_rev4_800_53/catalog.json",
+                "include-controls": [
+                    {"with-id": "AC-1"}, 
+                    {"with-id": "AC-2"}, 
+                    {"with-id": "AC-3"}, 
+                    {"with-id": "AC-4"}, 
+                    {"with-id": "AC-6"}, 
+                    {"with-id": "AU-2"}, 
+                    {"with-id": "AU-3"}, 
+                    {"with-id": "CM-6"}, 
+                    {"with-id": "CM-7"}, 
+                    {"with-id": "CM-8"}, 
+                    {"with-id": "IA-2"}, 
+                    {"with-id": "IA-3"}, 
+                    {"with-id": "IA-4"}, 
+                    {"with-id": "SC-5"}, 
+                    {"with-id": "SC-7"}, 
+                    {"with-id": "SC-8"}, 
+                    {"with-id": "SI-2"}, 
+                    {"with-id": "SI-3"}, 
+                    {"with-id": "SI-4"},
+                    {"with-id": "SA-4"}, 
+                    {"with-id": "SA-5"}, 
+                    {"with-id": "SA-6"}, 
+                    {"with-id": "SA-7"}, 
+                    {"with-id": "SA-8"}, 
+                    {"with-id": "SA-9"}, 
+                    {"with-id": "SA-10"}, 
+                    {"with-id": "SA-11"}, 
+                    {"with-id": "SA-12"},
+                    {"with-id": "AT-2"}, 
+                    {"with-id": "AT-3"}, 
+                    {"with-id": "AT-4"}
+                ]
+            }
+        ],
+        "modify": {
+            "set-parameters": [
+                {"param-id": "ac-1_prm_1"},
+                {"param-id": "ac-2_prm_1"},
+                {"param-id": "ac-3_prm_1"},
+                {"param-id": "ac-4_prm_1"},
+                {"param-id": "ac-6_prm_1"},
+                {"param-id": "au-2_prm_1"},
+                {"param-id": "au-3_prm_1"},
+                {"param-id": "cm-6_prm_1"},
+                {"param-id": "cm-7_prm_1"},
+                {"param-id": "cm-8_prm_1"},
+                {"param-id": "ia-2_prm_1"},
+                {"param-id": "ia-3_prm_1"},
+                {"param-id": "ia-4_prm_1"},
+                {"param-id": "sc-5_prm_1"},
+                {"param-id": "sc-7_prm_1"},
+                {"param-id": "sc-8_prm_1"},
+                {"param-id": "si-2_prm_1"},
+                {"param-id": "si-3_prm_1"},
+                {"param-id": "si-4_prm_1"},
+                {"param-id": "sa-4_prm_1"},
+                {"param-id": "sa-5_prm_1"},
+                {"param-id": "sa-6_prm_1"},
+                {"param-id": "sa-7_prm_1"},
+                {"param-id": "sa-8_prm_1"},
+                {"param-id": "sa-9_prm_1"},
+                {"param-id": "sa-10_prm_1"},
+                {"param-id": "sa-11_prm_1"},
+                {"param-id": "sa-12_prm_1"},
+                {"param-id": "at-2_prm_1"},
+                {"param-id": "at-3_prm_1"},
+                {"param-id": "at-4_prm_1"}
+            ]
+        }
+    }
+}

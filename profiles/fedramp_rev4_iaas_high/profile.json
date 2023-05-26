@@ -1,0 +1,64 @@
+{
+    "profile": {
+        "uuid": "3f1e0c2a-3b3c-4be7-83e7-4365de56035a",
+        "title": "FedRAMP Rev 4 High Baseline - IaaS Profile",
+        "last-modified": "2023-05-25T00:00:00Z",
+        "version": "1.0.0",
+        "oscal-version": "1.0.0",
+        "metadata": {
+            "title": "FedRAMP Rev4 High Baseline - IaaS Profile",
+            "last-modified": "2023-05-25",
+            "version": "1.0",
+            "oscal-version": "1.0.0"
+        },
+        "imports": [
+            {
+                "href": "trestle://catalogs/nist_rev4_800_53/catalog.json",
+                "include-controls": [
+                    {"with-id": "AC-1"}, 
+                    {"with-id": "AC-2"}, 
+                    {"with-id": "AC-3"}, 
+                    {"with-id": "AC-4"}, 
+                    {"with-id": "AC-6"}, 
+                    {"with-id": "AU-2"}, 
+                    {"with-id": "AU-3"}, 
+                    {"with-id": "CM-6"}, 
+                    {"with-id": "CM-7"}, 
+                    {"with-id": "CM-8"}, 
+                    {"with-id": "IA-2"}, 
+                    {"with-id": "IA-3"}, 
+                    {"with-id": "IA-4"}, 
+                    {"with-id": "SC-5"}, 
+                    {"with-id": "SC-7"}, 
+                    {"with-id": "SC-8"}, 
+                    {"with-id": "SI-2"}, 
+                    {"with-id": "SI-3"}, 
+                    {"with-id": "SI-4"}
+                ]
+            }
+        ],
+        "modify": {
+            "set-parameters": [
+                {"param-id": "ac-1_prm_1"},
+                {"param-id": "ac-2_prm_1"},
+                {"param-id": "ac-3_prm_1"},
+                {"param-id": "ac-4_prm_1"},
+                {"param-id": "ac-6_prm_1"},
+                {"param-id": "au-2_prm_1"},
+                {"param-id": "au-3_prm_1"},
+                {"param-id": "cm-6_prm_1"},
+                {"param-id": "cm-7_prm_1"},
+                {"param-id": "cm-8_prm_1"},
+                {"param-id": "ia-2_prm_1"},
+                {"param-id": "ia-3_prm_1"},
+                {"param-id": "ia-4_prm_1"},
+                {"param-id": "sc-5_prm_1"},
+                {"param-id": "sc-7_prm_1"},
+                {"param-id": "sc-8_prm_1"},
+                {"param-id": "si-2_prm_1"},
+                {"param-id": "si-3_prm_1"},
+                {"param-id": "si-4_prm_1"}
+            ]
+        }
+    }
+}
