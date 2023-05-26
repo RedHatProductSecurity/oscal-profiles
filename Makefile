@@ -5,6 +5,9 @@ BRANCH := main
 SHELL := /bin/bash
 SCRIPTS_DIR := "./vendor/scripts"
 
+# Ensure that FedRAMP profile is skipped when regenerating.
+SKIP_PROFILES := "fedramp_rev5_high"
+
 ############################################################################
 ## Environment setup
 ############################################################################
