@@ -19,12 +19,6 @@ then
     bash -c "$CMD"
   }
 
-  function pandoc {
-    ARGS=$@
-    CMD="$CONTAINER_CMD run -it --rm -w /demo/trestle-workspace -v $(pwd):/demo/trestle-workspace $TRESTLE_IMAGE:$TRESTLE_IMAGE_TAG $PANDOC_CMD_IMAGE $@"
-    bash -c "$CMD"
-  }
-
   function python {
     ARGS=$@
     CMD="$CONTAINER_CMD run -it --rm -w /demo/trestle-workspace -v $(pwd):/demo/trestle-workspace $TRESTLE_IMAGE:$TRESTLE_IMAGE_TAG $PYTHON_CMD_IMAGE $@"
