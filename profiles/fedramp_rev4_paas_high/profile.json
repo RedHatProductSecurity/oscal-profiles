@@ -12,7 +12,7 @@
                 "href": "trestle://profiles/fedramp_rev4_high/profile.json",
                 "include-controls": [
                     {
-                        "with-id": [
+                        "with-ids": [
                             "AC-1", 
                             "AC-2", 
                             "AC-3", 
