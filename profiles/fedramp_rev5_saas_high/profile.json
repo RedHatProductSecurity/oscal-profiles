@@ -1,0 +1,67 @@
+{
+  "profile": {
+    "uuid": "c3b5a4fb-6fbb-45b0-a68d-17d38c0c0dac",
+    "metadata": {
+      "title": "FedRAMP Rev 5 High Baseline- SaaS Profile",
+      "last-modified": "2023-05-30T18:43:10.129458+00:00",
+      "version": "1.0",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://profiles/fedramp_rev5_high/profile.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-1",
+              "ac-2",
+              "ac-3",
+              "ac-4",
+              "ac-6",
+              "au-2",
+              "au-3",
+              "cm-6",
+              "cm-7",
+              "cm-8",
+              "ia-2",
+              "ia-3",
+              "ia-4",
+              "sc-5",
+              "sc-7",
+              "sc-8",
+              "si-2",
+              "si-3",
+              "si-4",
+              "sa-4",
+              "sa-5",
+              "sa-8",
+              "sa-9",
+              "sa-10",
+              "sa-11",
+              "at-2",
+              "at-3",
+              "at-4"
+            ]
+          }
+        ]
+      }
+    ],
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "ac-1_prm_1"
+        },
+        {
+          "param-id": "at-2_prm_1"
+        },
+        {
+          "param-id": "at-3_prm_1"
+        },
+        {
+          "param-id": "sa-8_prm_1"
+        }
+      ],
+      "alters": []
+    }
+  }
+}

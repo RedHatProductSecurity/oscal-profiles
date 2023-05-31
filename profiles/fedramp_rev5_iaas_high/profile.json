@@ -1,0 +1,49 @@
+{
+  "profile": {
+    "uuid": "3f1e0c2a-3b3c-4be7-83e7-4365de56035a",
+    "metadata": {
+      "title": "FedRAMP Rev 5 High Baseline - IaaS Profile",
+      "last-modified": "2023-05-30T18:42:52.035755+00:00",
+      "version": "1.0",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://profiles/fedramp_rev5_high/profile.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-1",
+              "ac-2",
+              "ac-3",
+              "ac-4",
+              "ac-6",
+              "au-2",
+              "au-3",
+              "cm-6",
+              "cm-7",
+              "cm-8",
+              "ia-2",
+              "ia-3",
+              "ia-4",
+              "sc-5",
+              "sc-7",
+              "sc-8",
+              "si-2",
+              "si-3",
+              "si-4"
+            ]
+          }
+        ]
+      }
+    ],
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "ac-1_prm_1"
+        }
+      ],
+      "alters": []
+    }
+  }
+}
