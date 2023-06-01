@@ -9,6 +9,31 @@ on:
 
 jobs:
   update:
+    name: Assemble content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Automatically update content on push
+        run: |
+          make assemble-profiles
+      - name: commit and push changes
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'automated changes - assemble'
+          file_pattern: '*.json markdown/*'
+      
+  
+
+  update-downstream:
     name: Regenerate content
     runs-on: ubuntu-latest
     permissions:
