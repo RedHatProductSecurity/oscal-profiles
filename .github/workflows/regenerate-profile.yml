@@ -28,3 +28,22 @@ jobs:
         run: bash ./vendor/scripts/update.sh "Sync OSCAL profiles"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+  dispatch:
+    name: Dispatch to Downstreams
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          # Avoid PAT whenever possible. Only used for
+          # cross-repo API access.
+          github-token: ${{ secrets.PAT_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: 'RedHatProductSecurity',
+              repo: 'oscal-component-definitions',
+              workflow_id: 'update-profiles.yml',
+              ref: 'main'
+            })
+        
