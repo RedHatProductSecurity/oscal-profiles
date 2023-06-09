@@ -1,0 +1,35 @@
+name: Profile Assemble
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'markdown/profiles/**'
+      
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  auto-update:
+    name: Assemble profile content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Clone
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Automatically update content on push
+        run: make assemble-profiles
+      - name: Commit and Push Changes
+        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "profiles/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
