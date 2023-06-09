@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# shellcheck disable=SC2128
 SCRIPT_DIR="$(realpath "$(dirname "$BASH_SOURCE")")"
 
+# shellcheck disable=SC1091
 source "$SCRIPT_DIR/logging.sh"
+# shellcheck disable=SC1091
 source "$SCRIPT_DIR/trestle.sh"
 
 function import_nist_rev5_catalog () {

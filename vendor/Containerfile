@@ -14,13 +14,15 @@ FROM registry.access.redhat.com/ubi8/python-38 AS demo
 COPY requirements.txt requirements.txt
 
 # Install dependencies
-RUN  python3.8 -m pip install --upgrade pip setuptools \
-     && python3.8 -m pip install -r requirements.txt
+RUN  python3.8 -m pip install --no-cache-dir --upgrade pip setuptools \
+     && python3.8 -m pip install --no-cache-dir -r requirements.txt
 
 COPY --from=build /demo /demo
 
-USER root
-
 WORKDIR /demo
 
+USER root
+
 RUN ./scripts/install.sh install_demo_utils
+
+USER 1001
