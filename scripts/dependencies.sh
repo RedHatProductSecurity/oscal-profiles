@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# shellcheck disable=SC2128
 SCRIPT_DIR="$(realpath "$(dirname "$BASH_SOURCE")")"
 
+# shellcheck disable=SC1091
 source "$SCRIPT_DIR/logging.sh"
 
 function install_epel () {
