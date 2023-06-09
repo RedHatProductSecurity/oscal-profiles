@@ -25,6 +25,6 @@ jobs:
       - name: Regenerate profiles
         run: make regenerate-profiles
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh "Sync OSCAL profiles"
+        run: bash ./vendor/scripts/update.sh -c "sync OSCAL profiles" "markdown/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
