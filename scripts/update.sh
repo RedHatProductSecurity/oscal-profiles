@@ -18,16 +18,18 @@ source "$SCRIPT_DIR/logging.sh"
 # shellcheck disable=SC1091
 source "$SCRIPT_DIR/auto-commit-push.sh"
 
-USAGE="Usage: update.sh [-c commit_msg] <patterns>"
+USAGE="Usage: update.sh [-c commit_msg] [-a author] <patterns>"
 
 function main() {
 
     DEFAULT_COMMIT_MSG="chore: automatic content update"
+    AUTHOR=""
 
     # Parse command line options
-    while getopts ":c:" opt; do
+    while getopts ":c:a:" opt; do
       case $opt in
         c) commit_msg="$OPTARG";;
+        a) AUTHOR="$OPTARG";;
         \?) echo "Invalid option -$OPTARG" >&2; exit 1;;
       esac
     done
@@ -57,8 +59,8 @@ function main() {
       if [ -z "$(git status --untracked-files=no --porcelain)" ]; then
           run_log 0 "Nothing to commit"
       else
-          local_commit "$COMMIT_BODY"
-          create_branch_pull_request "$COMMIT_TITLE" "$COMMIT_BODY" "autoupdate_$GITHUB_RUN_ID" 
+          local_commit "$COMMIT_BODY" "$AUTHOR"
+          create_branch_pull_request "autoupdate_$GITHUB_RUN_ID" "$COMMIT_TITLE" "$COMMIT_BODY"
       fi
     fi
 }

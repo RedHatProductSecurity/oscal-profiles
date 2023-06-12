@@ -12,9 +12,9 @@ function clone_repo() {
 # Function to commit changes locally in git
 function local_commit () {
     local COMMIT_MESSAGE="${1:-"chore: automatic content update"}"
-    local COMMIT_USER="${2:-"github-actions[bot]"}"
-    local COMMIT_EMAIL="${3:-"github-actions@github.com"}"
-    local COMMIT_AUTHOR="${4:-"github-actions[bot] <github-actions@github.com>"}"
+    local COMMIT_AUTHOR="${2:-"github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"}"
+    local COMMIT_USER="${3:-"github-actions[bot]"}"
+    local COMMIT_EMAIL="${4:-"41898282+github-actions[bot]@users.noreply.github.com"}"
 
     git -c user.name="$COMMIT_USER" -c user.email="$COMMIT_EMAIL" \
         commit -m "$COMMIT_MESSAGE" --author "$COMMIT_AUTHOR"
@@ -39,9 +39,9 @@ function push_to_remote() {
 
 # Function to create a new branch and GitHub pull request
 function create_branch_pull_request() {
-    local PR_TITLE="${1:-"chore: sync OSCAL content"}"
-    local PR_BODY="${2:-"chore: automatic content update"}"
-    local BRANCH="${3:?"branch is required"}"
+    local BRANCH="${1:?"branch is required"}"
+    local PR_TITLE="${2:-"chore: sync OSCAL content"}"
+    local PR_BODY="${3:-"chore: automatic content update"}"
     push_to_remote "$BRANCH"
     gh pr create -t "$PR_TITLE" -b "$PR_BODY" -B "main" -H "$BRANCH" --draft
 }
