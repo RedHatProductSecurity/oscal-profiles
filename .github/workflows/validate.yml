@@ -23,3 +23,5 @@ jobs:
         run: make trestle-install
       - name: Validate with Trestle
         run: make validate
+      - name: Sanity check
+        run: make sanity-profiles
