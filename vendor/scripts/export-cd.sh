@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# shellcheck disable=SC2128
 SCRIPT_DIR="$(realpath "$(dirname "$BASH_SOURCE")")"
 
+# shellcheck disable=SC1091
 source "$SCRIPT_DIR/logging.sh"
 
-export NSDATE=$(date --rfc-3339=ns | sed 's/ /T/; s/\(\....\).*\([+-]\)/\1\2/g')
+NSDATE=$(date --rfc-3339=ns | sed 's/ /T/; s/\(\....\).*\([+-]\)/\1\2/g')
+export NSDATE
 export CDDIR="component-definitions/hello-world-$GITHUB_REF_NAME"
 
 function export-cd () {

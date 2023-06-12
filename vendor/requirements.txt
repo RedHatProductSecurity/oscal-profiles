@@ -54,7 +54,7 @@ cmarkgfm==0.6.0
     # via
     #   -r requirements.in
     #   compliance-trestle
-compliance-trestle==2.1.0
+compliance-trestle @ git+https://github.com/IBM/compliance-trestle@5f59a7fc7cf8b88a9f77ba4554dd493acff67114
     # via -r requirements.in
 cryptography==39.0.2
     # via
@@ -234,7 +234,7 @@ pyyaml==6.0
     #   jsonschema-spec
     #   openapi-spec-validator
     #   python-frontmatter
-requests==2.28.2
+requests==2.31.0
     # via
     #   -r requirements.in
     #   prance
@@ -248,9 +248,7 @@ ruamel-yaml==0.17.21
     #   compliance-trestle
     #   prance
 ruamel-yaml-clib==0.2.7
-    # via
-    #   -r requirements.in
-    #   ruamel-yaml
+    # via -r requirements.in
 six==1.16.0
     # via
     #   -r requirements.in
@@ -268,9 +266,7 @@ toml==0.10.2
     #   -r requirements.in
     #   datamodel-code-generator
 tomli==2.0.1
-    # via
-    #   -r requirements.in
-    #   black
+    # via -r requirements.in
 typed-ast==1.5.4
     # via
     #   -r requirements.in
@@ -278,7 +274,6 @@ typed-ast==1.5.4
 typing-extensions==4.5.0
     # via
     #   -r requirements.in
-    #   black
     #   jsonschema-spec
     #   pydantic
 urllib3==1.26.14
@@ -286,6 +281,4 @@ urllib3==1.26.14
     #   -r requirements.in
     #   requests
 zipp==3.15.0
-    # via
-    #   -r requirements.in
-    #   importlib-resources
+    # via -r requirements.in

@@ -1,14 +1,13 @@
 #!/bin/bash
 
+# shellcheck disable=SC2128
 SCRIPT_DIR="$(realpath "$(dirname "$BASH_SOURCE")")"
 
+# shellcheck disable=SC1091
 source "$SCRIPT_DIR/dependencies.sh"
 
 function build () {
     install_go
-    install_cosign
-    install_gcr
-    install_oras
 }
 
 function install_demo_utils () {
