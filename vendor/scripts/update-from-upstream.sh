@@ -25,13 +25,15 @@ function main() {
     DEFAULT_INCLUDE_DIRS=()
     BRANCH=""
     REPO_URL=""
+    AUTHOR=""
     patterns=()
 
     # Parse command line options
-    while getopts ":b:r:p:i:" opt; do
+    while getopts ":b:r:a:p:i:" opt; do
         case $opt in
             b) BRANCH="$OPTARG";;
             r) REPO_URL="$OPTARG";;
+            a) AUTHOR="$OPTARG";;
             p) patterns+=("$OPTARG");;
             i) include_dirs+=("$OPTARG");;
             \?) echo "Invalid option -$OPTARG" >&2; exit 1;;
@@ -40,7 +42,7 @@ function main() {
 
     # Check if required arguments are provided
     if [ -z "$BRANCH" ] || [ -z "$REPO_URL" ] || [ ${#patterns[@]} -eq 0 ]; then
-    echo "Usage: update-from-upstream.sh -b branch -r repo_url -p pattern1 -p pattern2 ... [-i include_dir1] [-i include_dir2] ..."
+    echo "Usage: update-from-upstream.sh -b branch -r repo_url -a author -p pattern1 -p pattern2 ... [-i include_dir1] [-i include_dir2] ..."
     exit 1
     fi
 
@@ -83,8 +85,8 @@ function main() {
         add_files "${patterns[@]}"
 
         if [ -n "$(git status --untracked-files=no --porcelain)" ]; then
-            local_commit "$COMMIT_BODY"
-            create_branch_pull_request "$COMMIT_TITLE" "$COMMIT_BODY" "autoupdate_$GITHUB_RUN_ID"
+            local_commit "$COMMIT_BODY" "$AUTHOR"
+            create_branch_pull_request "autoupdate_$GITHUB_RUN_ID" "$COMMIT_TITLE" "$COMMIT_BODY"
         else
             run_log 0 "Nothing to commit."
         fi
