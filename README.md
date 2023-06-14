@@ -1,10 +1,8 @@
 # oscal-profiles
 
-OSCAL Custom Profiles for testing with FedRAMP HIGH baseline profile.
+OSCAL Custom Profiles for testing with FedRAMP REV5 HIGH baseline profile.
 
-> IMPORTANT: The FedRAMP Rev5 Baseline OSCAL documents have not been merged at the time this was written. The profile used in this repository is from this [pull request](https://github.com/GSA/fedramp-automation/pull/389) and has been converted to JSON.
-
-Cloud Service Model derived profiles are experimental and have not been validated. 
+> WARNING: Cloud Service Model derived profiles are experimental and have not been validated. 
 
 ## Directory Structure
 
