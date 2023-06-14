@@ -1,0 +1,33 @@
+name: Update content from upstream (NIST and FedRAMP)
+
+on: workflow_dispatch
+
+jobs:
+  update:
+    name: Update content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Update catalogs
+        run: |
+          rm -rf catalogs/nist_rev5_800_53
+          trestle import -f https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json -o nist_rev5_800_53
+      - name: Update profiles
+        run: |
+          rm -rf "profiles/fedramp_rev5_high"
+          trestle import -f https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json -o fedramp_rev4_moderate
+          trestle href --name fedramp_rev5_high -hr trestle://catalogs/nist_rev5_800_53/catalog.json
+      - name: Update and PR
+        run: bash ./vendor/scripts/update.sh -c "sync upstream OSCAL content" -a "$ACTOR" "*.json"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
