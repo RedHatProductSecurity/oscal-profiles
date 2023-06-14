@@ -2,6 +2,10 @@ name: Update content from upstream (NIST and FedRAMP)
 
 on: workflow_dispatch
 
+env:
+  FEDRAMP_PROFILE_NAME: "fedramp_rev5_high"
+  NIST_CATALOG_NAME: "nist_rev5_800_53"
+
 jobs:
   update:
     name: Update content
@@ -19,13 +23,13 @@ jobs:
         run: make trestle-install
       - name: Update catalogs
         run: |
-          rm -rf catalogs/nist_rev5_800_53
-          trestle import -f https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json -o nist_rev5_800_53
+          rm -rf "catalogs/${NIST_CATALOG_NAME}"
+          trestle import -f https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json -o "${NIST_CATALOG_NAME}"
       - name: Update profiles
         run: |
-          rm -rf "profiles/fedramp_rev5_high"
-          trestle import -f https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json -o fedramp_rev4_moderate
-          trestle href --name fedramp_rev5_high -hr trestle://catalogs/nist_rev5_800_53/catalog.json
+          rm -rf "profiles/${FEDRAMP_PROFILE_NAME}"
+          trestle import -f https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json -o "${FEDRAMP_PROFILE_NAME}"
+          trestle href --name "${FEDRAMP_PROFILE_NAME}" -hr "trestle://catalogs/${NIST_CATALOG_NAME}/catalog.json"
       - name: Update and PR
         run: bash ./vendor/scripts/update.sh -c "sync upstream OSCAL content" -a "$ACTOR" "*.json"
         env:
