@@ -3,8 +3,8 @@
     "uuid": "9af0a7d3-252c-4f18-9baf-4f10e82bfac8",
     "metadata": {
       "title": "FedRAMP Rev 5 High Baseline",
-      "published": "2023-03-30T00:00:00+00:00",
-      "last-modified": "2023-03-30T00:00:00+00:00",
+      "published": "2023-06-15T00:00:00+00:00",
+      "last-modified": "2023-06-15T00:00:00+00:00",
       "version": "fedramp-2.0.0-oscal1.0.4",
       "oscal-version": "1.0.4",
       "roles": [
@@ -3769,7 +3769,7 @@
           "adds": [
             {
               "position": "ending",
-              "by-id": "cm-9",
+              "by-id": "cm-9_smt",
               "parts": [
                 {
                   "id": "cm-9_fr_gdn.1",
@@ -4458,7 +4458,7 @@
                           "value": "(h) Requirement:"
                         }
                       ],
-                      "prose": "For cases where technology doesn’t allow multi-factor authentication, complexity and length rules should be enforced: 15 characters minimum, including uppercase letters, lowercase letters, numbers, and/or special characters.\n\nFor emergency use accounts, complexity and length rules should be used: 15 characters minimum, including uppercase letters, lowercase letters, numbers, and/or special characters and passwords must be changed if used."
+                      "prose": "For cases where technology doesn’t allow multi-factor authentication, these rules should be enforced: must have a minimum length of 14 characters and must support all printable ASCII characters.\n\nFor emergency use accounts, these rules should be enforced: must have a minimum length of 14 characters, must support all printable ASCII characters, and passwords must be changed if used."
                     },
                     {
                       "id": "ia-5.1_fr_gdn.1",
@@ -4469,7 +4469,7 @@
                           "value": "Guidance:"
                         }
                       ],
-                      "prose": "Note that (c) and (d) require the use of cryptography which must be compliant with Federal requirements and utilize FIPS validated or NSA approved cryptography (see SC-13.)"
+                      "prose": "Note that (c) and (d) require the use of cryptography which must be compliant with Federal requirements and utilize FIPS validated or NSA approved cryptography (see SC-13)."
                     }
                   ]
                 }
@@ -5961,7 +5961,7 @@
           "adds": [
             {
               "position": "ending",
-              "by-id": "si-5",
+              "by-id": "si-5_smt",
               "parts": [
                 {
                   "id": "si-5_fr_smt.1",
@@ -6232,8 +6232,8 @@
           ],
           "rlinks": [
             {
-              "href": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/xml/NIST_SP-800-53_rev5_catalog.xml",
-              "media-type": "application/xml"
+              "href": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+              "media-type": "application/json"
             }
           ]
         }
