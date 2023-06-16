@@ -2,6 +2,7 @@ name: Dispatch downstreams
 
 on:
   workflow_call:
+  workflow_dispatch:
   workflow_run:
     workflows: [Regenerate profile content]
     types:
@@ -12,11 +13,14 @@ jobs:
     name: Dispatch to Downstreams
     runs-on: ubuntu-latest
     steps:
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with: 
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
       - uses: actions/github-script@v6
         with:
-          # Avoid PAT whenever possible. Only used for
-          # cross-repo API access.
-          github-token: ${{ secrets.PAT_TOKEN }}
+          github-token: ${{ steps.get_installation_token.outputs.token }}
           script: |
             await github.rest.actions.createWorkflowDispatch({
               owner: 'RedHatProductSecurity',
