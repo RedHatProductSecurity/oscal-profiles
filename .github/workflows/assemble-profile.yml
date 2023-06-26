@@ -1,15 +1,12 @@
 name: Profile Assemble
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'markdown/profiles/**'
-      
+  workflow_call:
+  workflow_dispatch:
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-
+  
 jobs:
   auto-update:
     name: Assemble profile content
@@ -21,15 +18,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+      - name: Assemble profile
+        id: assemble-profile
+        uses: RedHatProductSecurity/trestle-bot@main
         with:
-          python-version: 3.8
-      - name: Install Trestle
-        run: make trestle-install
-      - name: Automatically update content on push
-        run: make assemble-profiles
-      - name: Commit and Push Changes
-        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "profiles/*"
+          markdown_path: "markdown/profiles"
+          assemble_model: "profile"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

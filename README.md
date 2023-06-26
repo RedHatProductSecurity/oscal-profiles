@@ -70,6 +70,5 @@ graph LR
 
 1. Catalogs and profiles currently have to be synced by manually executing a GitHub Action workflow.
 2. Content must be assembled using the provided commands. Tasks are run when pull requests are submitted to check whether content is valid and in sync.
-3. The FedRAMP workflow imports the Rev4 baselines currently. This will be updated once the Rev5 baselines are available.
 
 To see the available make targets, use `make help`. For information on how to edit the content in this repository, see the [tutorial](./docs/tutorial.md).
