@@ -1,35 +1,51 @@
 {
-    "profile": {
-      "uuid": "7bd0c149-c1ce-4278-8709-84d8585af4ce",
-      "metadata": {
-        "title": "Example",
-        "last-modified": "2023-03-08T23:49:44.329301+00:00",
-        "version": "0.0.1",
-        "oscal-version": "1.0.4"
+  "profile": {
+    "uuid": "7bd0c149-c1ce-4278-8709-84d8585af4ce",
+    "metadata": {
+      "title": "Example",
+      "last-modified": "2023-06-29T19:44:09.127614+00:00",
+      "version": "0.0.1",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://profiles/fedramp_rev5_high/profile.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-1",
+              "ac-2",
+              "ac-4.4",
+              "sc-1"
+            ]
+          }
+        ]
+      }
+    ],
+    "merge": {
+      "combine": {
+        "method": "merge"
       },
-      "imports": [
+      "as-is": true
+    },
+    "modify": {
+      "alters": [
+        {
+          "control-id": "ac-4.4",
+          "adds": [
             {
-              "href": "trestle://profiles/fedramp_rev5_high/profile.json",
-              "include-controls": [
+              "position": "ending",
+              "parts": [
                 {
-                  "with-ids": [
-                    "ac-1",
-                    "ac-2",
-                    "ac-4.4",
-                    "sc-1"
-                  ]
+                  "id": "ac-4.4_extra_guidance",
+                  "name": "extra_guidance",
+                  "prose": "Testing extra"
                 }
               ]
             }
-          ],
-          "merge": {
-            "combine": {
-              "method": "merge"
-            },
-            "as-is": true
-          },
-          "modify": {
-            "alters": []
-          }
+          ]
+        }
+      ]
     }
   }
+}
