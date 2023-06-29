@@ -17,7 +17,7 @@ jobs:
       - name: Clone
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref_name }}
       - name: Assemble profile
         id: assemble-profile
         uses: RedHatProductSecurity/trestle-bot@main
