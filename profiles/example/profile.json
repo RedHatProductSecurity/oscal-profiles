@@ -3,7 +3,7 @@
     "uuid": "7bd0c149-c1ce-4278-8709-84d8585af4ce",
     "metadata": {
       "title": "Example",
-      "last-modified": "2023-06-29T19:44:09.127614+00:00",
+      "last-modified": "2023-06-29T19:56:00.071509+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.4"
     },
@@ -29,20 +29,11 @@
       "as-is": true
     },
     "modify": {
-      "alters": [
+      "set-parameters": [
         {
-          "control-id": "ac-4.4",
-          "adds": [
-            {
-              "position": "ending",
-              "parts": [
-                {
-                  "id": "ac-4.4_extra_guidance",
-                  "name": "extra_guidance",
-                  "prose": "Testing extra"
-                }
-              ]
-            }
+          "param-id": "ac-04.04_odp.01",
+          "values": [
+            "test"
           ]
         }
       ]
