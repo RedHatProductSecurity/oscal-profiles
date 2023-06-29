@@ -53,6 +53,6 @@ encrypted information is prevented from bypassing {{ insert: param, ac-04.04_odp
 <!-- underneath the parent ## Control or ## Part being added -->
 <!-- See https://ibm.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->
 
-## Control extra guidance
+## Control extra_guidance
 
 Testing extra
