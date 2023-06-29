@@ -3,7 +3,7 @@
     "uuid": "c3b5a4fb-6fbb-45b0-a68d-17d38c0c0dac",
     "metadata": {
       "title": "FedRAMP Rev 5 High Baseline- SaaS Profile",
-      "last-modified": "2023-05-30T18:43:10.129458+00:00",
+      "last-modified": "2023-06-29T15:21:54.679678-04:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
@@ -46,6 +46,9 @@
         ]
       }
     ],
+    "merge": {
+      "as-is": true
+    },
     "modify": {
       "set-parameters": [
         {

@@ -10,31 +10,31 @@ x-trestle-set-params:
   # The values list refers to the values in the catalog, and the profile-values represent values
   # in SetParameters of the Profile.
   #
-  ac-04.04_odp.01:
-    values:
-  ac-04.04_odp.02:
-    values:
-  ac-04.04_odp.03:
+  at-04_odp:
     values:
 x-trestle-global:
   profile:
-    title: Example
-  sort-id: ac-04.04
+    title: FedRAMP Rev 5 High Baseline- SaaS Profile
+  sort-id: at-04
 ---
 
-# ac-4.4 - \[Access Control\] Flow Control of Encrypted Information
+# at-4 - \[Awareness and Training\] Training Records
 
 ## Control Statement
 
-Prevent encrypted information from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
+- \[a.\] Document and monitor information security and privacy training activities, including security and privacy awareness training and specific role-based security and privacy training; and
+
+- \[b.\] Retain individual training records for {{ insert: param, at-04_odp }}.
 
 ## Control guidance
 
-Flow control mechanisms include content checking, security policy filters, and data type identifiers. The term encryption is extended to cover encoded data not recognized by filtering mechanisms.
+Documentation for specialized training may be maintained by individual supervisors at the discretion of the organization. The National Archives and Records Administration provides guidance on records retention for federal agencies.
 
 ## Control assessment-objective
 
-encrypted information is prevented from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
+information security and privacy training activities, including security and privacy awareness training and specific role-based security and privacy training, are documented;
+information security and privacy training activities, including security and privacy awareness training and specific role-based security and privacy training, are monitored;
+individual training records are retained for {{ insert: param, at-04_odp }}.
 
 # Editable Content
 
