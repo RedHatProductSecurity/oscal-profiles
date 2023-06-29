@@ -3,7 +3,7 @@
     "uuid": "3f1e0c2a-3b3c-4be7-83e7-4365de56035a",
     "metadata": {
       "title": "FedRAMP Rev 5 High Baseline - IaaS Profile",
-      "last-modified": "2023-05-30T18:42:52.035755+00:00",
+      "last-modified": "2023-06-29T15:21:50.699083-04:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
@@ -37,12 +37,10 @@
         ]
       }
     ],
+    "merge": {
+      "as-is": true
+    },
     "modify": {
-      "set-parameters": [
-        {
-          "param-id": "ac-1_prm_1"
-        }
-      ],
       "alters": []
     }
   }

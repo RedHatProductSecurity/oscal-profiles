@@ -1,40 +1,23 @@
 ---
-x-trestle-set-params:
-  # You may set values for parameters in the assembled Profile by adding
-  #
-  # profile-values:
-  #   - value 1
-  #   - value 2
-  #
-  # below a section of values:
-  # The values list refers to the values in the catalog, and the profile-values represent values
-  # in SetParameters of the Profile.
-  #
-  ac-04.04_odp.01:
-    values:
-  ac-04.04_odp.02:
-    values:
-  ac-04.04_odp.03:
-    values:
 x-trestle-global:
   profile:
-    title: Example
-  sort-id: ac-04.04
+    title: FedRAMP Rev 5 High Baseline - PaaS Profile
+  sort-id: ac-06
 ---
 
-# ac-4.4 - \[Access Control\] Flow Control of Encrypted Information
+# ac-6 - \[Access Control\] Least Privilege
 
 ## Control Statement
 
-Prevent encrypted information from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
+Employ the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) that are necessary to accomplish assigned organizational tasks.
 
 ## Control guidance
 
-Flow control mechanisms include content checking, security policy filters, and data type identifiers. The term encryption is extended to cover encoded data not recognized by filtering mechanisms.
+Organizations employ least privilege for specific duties and systems. The principle of least privilege is also applied to system processes, ensuring that the processes have access to systems and operate at privilege levels no higher than necessary to accomplish organizational missions or business functions. Organizations consider the creation of additional processes, roles, and accounts as necessary to achieve least privilege. Organizations apply least privilege to the development, implementation, and operation of organizational systems.
 
 ## Control assessment-objective
 
-encrypted information is prevented from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
+the principle of least privilege is employed, allowing only authorized accesses for users (or processes acting on behalf of users) that are necessary to accomplish assigned organizational tasks.
 
 # Editable Content
 

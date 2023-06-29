@@ -10,31 +10,34 @@ x-trestle-set-params:
   # The values list refers to the values in the catalog, and the profile-values represent values
   # in SetParameters of the Profile.
   #
-  ac-04.04_odp.01:
+  sc-05_odp.01:
     values:
-  ac-04.04_odp.02:
+  sc-05_odp.02:
     values:
-  ac-04.04_odp.03:
+  sc-05_odp.03:
     values:
 x-trestle-global:
   profile:
-    title: Example
-  sort-id: ac-04.04
+    title: FedRAMP Rev 5 High Baseline - IaaS Profile
+  sort-id: sc-05
 ---
 
-# ac-4.4 - \[Access Control\] Flow Control of Encrypted Information
+# sc-5 - \[System and Communications Protection\] Denial-of-service Protection
 
 ## Control Statement
 
-Prevent encrypted information from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
+- \[a.\] {{ insert: param, sc-05_odp.02 }} the effects of the following types of denial-of-service events: {{ insert: param, sc-05_odp.01 }} ; and
+
+- \[b.\] Employ the following controls to achieve the denial-of-service objective: {{ insert: param, sc-05_odp.03 }}.
 
 ## Control guidance
 
-Flow control mechanisms include content checking, security policy filters, and data type identifiers. The term encryption is extended to cover encoded data not recognized by filtering mechanisms.
+Denial-of-service events may occur due to a variety of internal and external causes, such as an attack by an adversary or a lack of planning to support organizational needs with respect to capacity and bandwidth. Such attacks can occur across a wide range of network protocols (e.g., IPv4, IPv6). A variety of technologies are available to limit or eliminate the origination and effects of denial-of-service events. For example, boundary protection devices can filter certain types of packets to protect system components on internal networks from being directly affected by or the source of denial-of-service attacks. Employing increased network capacity and bandwidth combined with service redundancy also reduces the susceptibility to denial-of-service events.
 
 ## Control assessment-objective
 
-encrypted information is prevented from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
+the effects of {{ insert: param, sc-05_odp.01 }} are {{ insert: param, sc-05_odp.02 }};
+{{ insert: param, sc-05_odp.03 }} are employed to achieve the denial-of-service protection objective.
 
 # Editable Content
 
