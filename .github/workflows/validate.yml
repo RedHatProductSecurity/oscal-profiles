@@ -25,3 +25,8 @@ jobs:
         run: make validate
       - name: Sanity check
         run: make sanity-profiles
+  
+  call-assemble:
+    needs: [test]
+    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    uses: ./.github/workflows/assemble-profile.yml

@@ -1,0 +1,28 @@
+name: Profile Assemble
+on:
+  workflow_call:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
+jobs:
+  auto-update:
+    name: Assemble profile content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Clone
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Assemble profile
+        id: assemble-profile
+        uses: RedHatProductSecurity/trestle-bot@main
+        with:
+          markdown_path: "markdown/profiles"
+          assemble_model: "profile"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
