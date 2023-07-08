@@ -14,21 +14,24 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+      - name: Clone
+        uses: actions/checkout@v3
         with:
-          python-version: 3.8
-      - name: Install Trestle
-        run: make trestle-install
-      - name: Validate with Trestle
-        run: make validate
-      - name: Sanity check
-        run: make sanity-profiles
+          ref:  ${{ github.head_ref }}
+      - name: Check profile
+        id: check-profile
+        uses: RedHatProductSecurity/trestle-bot@main
+        with:
+          markdown_path: "markdown/profiles"
+          oscal_model: "profile"
+          check_only: true
+          skip_items: "fedramp_rev5_high"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
-  call-assemble:
+  call-autofix:
     needs: [test]
     permissions:
       contents: write
     if: ${{ always() && contains(needs.*.result, 'failure') }}
-    uses: ./.github/workflows/assemble-profile.yml
+    uses: ./.github/workflows/autofix-profile.yml
