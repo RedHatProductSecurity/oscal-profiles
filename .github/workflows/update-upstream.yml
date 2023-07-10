@@ -14,7 +14,18 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Generate app token
+        uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with: 
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+          permissions: >-
+            {"contents": "write", "pull_requests": "write"}
+      - name: Clone
+        uses: actions/checkout@v3
+        with:
+          token: ${{ steps.get_installation_token.outputs.token }}
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -30,8 +41,14 @@ jobs:
           rm -rf "profiles/${FEDRAMP_PROFILE_NAME}"
           trestle import -f https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json -o "${FEDRAMP_PROFILE_NAME}"
           trestle href --name "${FEDRAMP_PROFILE_NAME}" -hr "trestle://catalogs/${NIST_CATALOG_NAME}/catalog.json"
-      - name: Update and PR
-        run: bash ./vendor/scripts/update.sh -c "sync upstream OSCAL content" -a "$ACTOR" "catalogs/* profiles/*"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+      - name: Update content
+        uses: RedHatProductSecurity/trestle-bot@main
+        with:
+          markdown_path: "markdown/profiles"
+          oscal_model: "profile"
+          file_pattern: "*.json"
+          branch: "autoupdate-${{ github.run_id }}"
+          target_branch: "main"
+          skip_assemble: true
+          skip_regenerate: true
+          github_token: ${{ steps.get_installation_token.outputs.token }}

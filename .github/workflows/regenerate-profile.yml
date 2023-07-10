@@ -11,21 +11,28 @@ jobs:
   update:
     name: Regenerate content
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+      - name: Generate app token
+        uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with: 
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+          permissions: >-
+            {"contents": "write", "pull_requests": "write"}
+      - name: Clone
+        uses: actions/checkout@v3
         with:
-          python-version: 3.8
-      - name: Install Trestle
-        run: make trestle-install
+          token: ${{ steps.get_installation_token.outputs.token }}
       - name: Regenerate profiles
-        run: make regenerate-profiles
-      - name: Update and PR
-        run: bash ./vendor/scripts/update.sh -c "sync OSCAL profiles" -a "$ACTOR" "markdown/*"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        id: regenerate
+        uses: RedHatProductSecurity/trestle-bot@main
+        with:
+          markdown_path: "markdown/profiles"
+          oscal_model: "profile"
+          file_pattern: "markdown/*"
+          branch: "autoupdate-${{ github.run_id }}"
+          target_branch: "main"
+          skip_assemble: true
+          skip_items: "fedramp_rev5_high"
+          github_token: ${{ steps.get_installation_token.outputs.token }}

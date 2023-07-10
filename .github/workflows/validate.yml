@@ -26,7 +26,7 @@ jobs:
           oscal_model: "profile"
           check_only: true
           skip_items: "fedramp_rev5_high"
-  
+    
   call-autofix:
     needs: [test]
     if: ${{ always() && contains(needs.*.result, 'failure') }}
