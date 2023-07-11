@@ -15,12 +15,10 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+      - name: Setup trestle
+        uses: ./.github/actions/setup-trestle
         with:
-          python-version: 3.8
-      - name: Install Trestle
-        run: make trestle-install
+          python-version: "3.8"
       - name: Update catalogs
         run: |
           rm -rf "catalogs/${NIST_CATALOG_NAME}"
