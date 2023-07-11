@@ -37,38 +37,38 @@ graph LR
     end
     subgraph GitHub Actions
         Catalog_Profile_Import(Catalog/Profile Import)
-        Sync_Profiles(Sync Profiles with Catalogs)
-        Sync_Profiles_P(Sync Profiles with Upstream Profles)
-        Trestle_Utility(Trestle Utility)
-        Git(Git)
-        GitHub_CLI(GitHub CLI)
+        subgraph Trestle Bot
+            Commit(Commit)
+            Create_Pull_Request(Create Pull Request)
+            Sync_Profiles(Sync Profiles with Catalogs)
+            Sync_Profiles_P(Sync Profiles with Upstream Profiles)
+        end
     end
     subgraph Review and Approval
-        Draft_PR((Draft PR))
         Pull_Request(Pull Request)
     end
     Person(Person)
 
-    Official_Catalogs_Profiles -- Updated Content --> Catalog_Profile_Import
-    Catalog_Profile_Import -- Updated Content --> Trestle_Utility
-    Trestle_Utility -- Sanity Checks --> Git
-    Git -- Commit--> GitHub_CLI
-    GitHub_CLI -- Open --> Draft_PR
-    Sync_Profiles -- Catalog Content --> Trestle_Utility
-    Sync_Profiles_P -- Profile Content --> Trestle_Utility
-    Draft_PR -- Run Checks --> Pull_Request
+    Official_Catalogs_Profiles --> Catalog_Profile_Import
+    Catalog_Profile_Import --> A{Content Updates?}
+    A -- Yes --> Commit
+    Commit --> Create_Pull_Request
+    Create_Pull_Request --> Person
+    A -- No --> B[End]
+    Sync_Profiles -- Catalog Content --> A
+    Sync_Profiles_P -- Profile Content --> A
     Pull_Request -- Merge --> Catalogs
     Pull_Request -- Merge --> Profiles
     Pull_Request -- Merge --> Upstream_Profiles
-    Catalogs -- Catalog Change Detected --> Sync_Profiles
-    Upstream_Profiles -- Profile Change Detected --> Sync_Profiles_P
-    Person -- Review/Convert --> Draft_PR
+    Catalogs -- Workflow Dispatched --> Sync_Profiles
+    Upstream_Profiles -- Workflow Dispatched --> Sync_Profiles_P
+    Person -- Review --> Pull_Request
     Person -- Approve --> Pull_Request
+    Profiles --> B
 ```
 
 ### Current Limitations:
 
-1. Catalogs and profiles currently have to be synced by manually executing a GitHub Action workflow.
-2. Content must be assembled using the provided commands. Tasks are run when pull requests are submitted to check whether content is valid and in sync.
+- Catalogs and profiles currently have to be synced by manually executing a GitHub Action workflow.
 
-To see the available make targets, use `make help`. For information on how to edit the content in this repository, see the [tutorial](./docs/tutorial.md).
+To complete work from a fork, local automation is available. To see the available make targets, use `make help`. For information on how to edit the content in this repository, see the [tutorial](./docs/tutorial.md).
