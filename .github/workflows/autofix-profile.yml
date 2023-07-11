@@ -27,5 +27,4 @@ jobs:
           branch: ${{ github.head_ref }}
           file_pattern: "*.json,markdown/*"
           skip_items: "fedramp_rev5_high"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
