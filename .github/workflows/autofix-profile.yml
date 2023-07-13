@@ -22,7 +22,7 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
           permissions: >-
-            {"contents": "write", "pull_requests": "write"}
+            {"contents": "write"}
       - name: Autofix profile
         id: autofix-profile
         uses: RedHatProductSecurity/trestle-bot@main
