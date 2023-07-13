@@ -31,3 +31,6 @@ jobs:
     needs: [test]
     if: ${{ always() && contains(needs.*.result, 'failure') }}
     uses: ./.github/workflows/autofix-profile.yml
+    with:
+      branch: ${{ github.head_ref }}
+    secrets: inherit

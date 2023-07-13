@@ -1,0 +1,11 @@
+name: Run autofix adhoc
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-autofix:
+    uses: ./.github/workflows/autofix-profile.yml
+    with:
+      branch: ${{ github.ref_name }}
+    secrets: inherit
