@@ -1,7 +1,7 @@
 name: Evaluate profiles
 on:
   pull_request:
-    types: [ opened, review_requested, ready_for_review, reopened, synchronize ]
+    types: [ opened, ready_for_review, reopened, synchronize ]
     branches:
       - main
     paths:
