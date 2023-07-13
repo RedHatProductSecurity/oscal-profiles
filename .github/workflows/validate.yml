@@ -26,12 +26,8 @@ jobs:
           oscal_model: "profile"
           check_only: true
           skip_items: "fedramp_rev5_high"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   call-autofix:
     needs: [test]
-    permissions:
-      contents: write
     if: ${{ always() && contains(needs.*.result, 'failure') }}
     uses: ./.github/workflows/autofix-profile.yml

@@ -18,6 +18,8 @@ jobs:
         with: 
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
+          permissions: >-
+            {"actions": "write"}
       - uses: actions/github-script@v6
         with:
           github-token: ${{ steps.get_installation_token.outputs.token }}
