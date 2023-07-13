@@ -21,6 +21,8 @@ jobs:
         with: 
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
+          permissions: >-
+            {"contents": "write"}
       - name: Clone
         uses: actions/checkout@v3
         with:
