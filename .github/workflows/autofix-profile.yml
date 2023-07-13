@@ -15,18 +15,17 @@ jobs:
     name: Autofix profile content
     runs-on: ubuntu-latest
     steps:
-      - name: Clone
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ inputs.branch }}
       - name: Generate app token
         uses: tibdex/github-app-token@v1
         id: get_installation_token
         with: 
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
-          permissions: >-
-            {"contents": "write"}
+      - name: Clone
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.branch }}
+          token: ${{ steps.get_installation_token.outputs.token }}
       - name: Autofix profile
         id: autofix-profile
         uses: RedHatProductSecurity/trestle-bot@main
@@ -36,5 +35,5 @@ jobs:
           branch: ${{ inputs.branch }}
           file_pattern: "*.json,markdown/*"
           skip_items: "fedramp_rev5_high"
-        env:
-          GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+          commit_user_name: "trestle-bot[bot]"
+          commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
