@@ -3,7 +3,7 @@
     "uuid": "7bd0c149-c1ce-4278-8709-84d8585af4ce",
     "metadata": {
       "title": "Example",
-      "last-modified": "2023-07-14T15:17:19.754047+00:00",
+      "last-modified": "2023-07-14T16:13:09.392170+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.4"
     },
@@ -39,7 +39,7 @@
                 {
                   "id": "ac-1_extra_guidance",
                   "name": "extra_guidance",
-                  "prose": "Extra guidance"
+                  "prose": "More extra guidance"
                 }
               ]
             }
