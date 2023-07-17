@@ -51,4 +51,6 @@ jobs:
           target_branch: "main"
           skip_assemble: true
           skip_regenerate: true
+          commit_user_name: "trestle-bot[bot]"
+          commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
           github_token: ${{ steps.get_installation_token.outputs.token }}
