@@ -1,0 +1,65 @@
+name: Profile Create
+on:
+  workflow_dispatch:
+   inputs:
+      import_type:
+        type: choice
+        description: Import type
+        options:
+        - catalog
+        - profile
+      import_name:
+        required: true
+        description: Name of profile or catalog in trestle workspace to be imported
+      output:
+        required: true
+        description: Name of the profile to create
+     
+
+jobs:
+  create-profile:
+    name: Create profile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate app token
+        uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with: 
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+          permissions: >-
+            {"contents": "write", "pull_requests": "write"}
+      - name: Clone
+        uses: actions/checkout@v3
+        with:
+          token: ${{ steps.get_installation_token.outputs.token }}
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+      - name: Install Trestlebot
+        run: make trestlebot-install
+      - name: Create new profile with imports
+        run: |
+          python3 scripts/set_default_profile.py --import_path "${IMPORT_TYPE}s/${IMPORT_NAME}/${IMPORT_TYPE}.json" \
+          --profile_name "${OUTPUT}" --trestle_root .
+        env:
+          OUTPUT:  ${{ github.event.inputs.output }}
+          IMPORT_NAME: ${{ github.event.inputs.import_name }}
+          IMPORT_TYPE: ${{ github.event.inputs.import_type }}
+      - name: Generate and PR new profile
+        id: generate-profile
+        uses: RedHatProductSecurity/trestle-bot@main
+        with:
+          markdown_path: "markdown/profiles"
+          oscal_model: "profile"
+          branch: "profile-create-${{ github.run_id }}"
+          target_branch: "main"
+          file_pattern: "*.json,markdown/*"
+          skip_items: "fedramp_rev5_high"
+          skip_assemble: true
+          commit_user_name: "trestle-bot[bot]"
+          commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
+          commit_message: "adds profile ${{ github.event.inputs.output }}"
+          pull_request_title: "Add profile ${{ github.event.inputs.output }}"
+          github_token: ${{ steps.get_installation_token.outputs.token }}
