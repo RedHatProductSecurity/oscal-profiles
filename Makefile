@@ -23,3 +23,7 @@ update-subtree:
 import-nist:
 	@source $(SCRIPTS_DIR)/import.sh && import_nist_rev5_catalog
 .PHONY: import-nist
+
+trestlebot-install:
+	@python3 -m pip install --upgrade pip setuptools && python3 -m pip install -r requirements.txt
+.PHONY: trestlebot-install
