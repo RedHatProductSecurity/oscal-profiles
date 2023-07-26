@@ -1,0 +1,58 @@
+---
+x-trestle-set-params:
+  # You may set values for parameters in the assembled Profile by adding
+  #
+  # profile-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values in the catalog, and the profile-values represent values
+  # in SetParameters of the Profile.
+  #
+  ac-04.15_odp.01:
+    values:
+  ac-04.15_odp.02:
+    values:
+  ac-04.15_odp.03:
+    values:
+x-trestle-global:
+  profile:
+    title: REPLACE_ME
+  sort-id: ac-04.15
+---
+
+# ac-4.15 - \[Access Control\] Detection of Unsanctioned Information
+
+## Control Statement
+
+When transferring information between different security domains, examine the information for the presence of {{ insert: param, ac-04.15_odp.01 }} and prohibit the transfer of such information in accordance with the {{ insert: param, ac-4.15_prm_2 }}.
+
+## Control Assessment Objective
+
+- \[AC-04(15)[01]\] when transferring information between different security domains, information is examined for the presence of {{ insert: param, ac-04.15_odp.01 }};
+
+- \[AC-04(15)[02]\] when transferring information between different security domains, transfer of {{ insert: param, ac-04.15_odp.01 }} is prohibited in accordance with the {{ insert: param, ac-04.15_odp.02 }};
+
+- \[AC-04(15)[03]\] when transferring information between different security domains, transfer of {{ insert: param, ac-04.15_odp.01 }} is prohibited in accordance with the {{ insert: param, ac-04.15_odp.03 }}.
+
+## Control guidance
+
+Unsanctioned information includes malicious code, information that is inappropriate for release from the source network, or executable code that could disrupt or harm the services or systems on the destination network.
+
+# Editable Content
+
+<!-- Make additions and edits below -->
+<!-- The above represents the contents of the control as received by the profile, prior to additions. -->
+<!-- If the profile makes additions to the control, they will appear below. -->
+<!-- The above markdown may not be edited but you may edit the content below, and/or introduce new additions to be made by the profile. -->
+<!-- If there is a yaml header at the top, parameter values may be edited. Use --set-parameters to incorporate the changes during assembly. -->
+<!-- The content here will then replace what is in the profile for this control, after running profile-assemble. -->
+<!-- The current profile has no added parts for this control, but you may add new ones here. -->
+<!-- Each addition must have a heading either of the form ## Control my_addition_name -->
+<!-- or ## Part a. (where the a. refers to one of the control statement labels.) -->
+<!-- "## Control" parts are new parts added after the statement part. -->
+<!-- "## Part" parts are new parts added into the top-level statement part with that label. -->
+<!-- Subparts may be added with nested hash levels of the form ### My Subpart Name -->
+<!-- underneath the parent ## Control or ## Part being added -->
+<!-- See https://ibm.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->
