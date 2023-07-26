@@ -1,35 +1,133 @@
 {
-    "profile": {
-      "uuid": "7bd0c149-c1ce-4278-8709-84d8585af4ce",
-      "metadata": {
-        "title": "Example",
-        "last-modified": "2023-03-08T23:49:44.329301+00:00",
-        "version": "0.0.1",
-        "oscal-version": "1.0.4"
-      },
-      "imports": [
-            {
-              "href": "trestle://profiles/fedramp_rev5_high/profile.json",
-              "include-controls": [
-                {
-                  "with-ids": [
-                    "ac-1",
-                    "ac-2",
-                    "ac-4.4",
-                    "sc-1"
-                  ]
-                }
-              ]
-            }
-          ],
-          "merge": {
-            "combine": {
-              "method": "merge"
-            },
-            "as-is": true
-          },
-          "modify": {
-            "alters": []
+  "profile": {
+    "uuid": "7bd0c149-c1ce-4278-8709-84d8585af4ce",
+    "metadata": {
+      "title": "Example",
+      "last-modified": "2023-07-26T20:24:52.560593+00:00",
+      "version": "0.0.1",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://profiles/fedramp_rev5_high/profile.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-1",
+              "ac-2",
+              "ac-4.4",
+              "sc-1"
+            ]
           }
+        ]
+      }
+    ],
+    "merge": {
+      "combine": {
+        "method": "merge"
+      },
+      "as-is": true
+    },
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "ac-01_odp.01"
+        },
+        {
+          "param-id": "ac-01_odp.02"
+        },
+        {
+          "param-id": "ac-01_odp.03"
+        },
+        {
+          "param-id": "ac-01_odp.04"
+        },
+        {
+          "param-id": "ac-01_odp.05"
+        },
+        {
+          "param-id": "ac-01_odp.06"
+        },
+        {
+          "param-id": "ac-01_odp.07"
+        },
+        {
+          "param-id": "ac-01_odp.08"
+        },
+        {
+          "param-id": "ac-1_prm_1"
+        },
+        {
+          "param-id": "ac-02_odp.01"
+        },
+        {
+          "param-id": "ac-02_odp.02"
+        },
+        {
+          "param-id": "ac-02_odp.03"
+        },
+        {
+          "param-id": "ac-02_odp.04"
+        },
+        {
+          "param-id": "ac-02_odp.05"
+        },
+        {
+          "param-id": "ac-02_odp.06"
+        },
+        {
+          "param-id": "ac-02_odp.07"
+        },
+        {
+          "param-id": "ac-02_odp.08"
+        },
+        {
+          "param-id": "ac-02_odp.09"
+        },
+        {
+          "param-id": "ac-02_odp.10"
+        },
+        {
+          "param-id": "ac-02.01_odp"
+        },
+        {
+          "param-id": "ac-04.04_odp.01"
+        },
+        {
+          "param-id": "ac-04.04_odp.02"
+        },
+        {
+          "param-id": "ac-04.04_odp.03"
+        },
+        {
+          "param-id": "sc-01_odp.01"
+        },
+        {
+          "param-id": "sc-01_odp.02"
+        },
+        {
+          "param-id": "sc-01_odp.03"
+        },
+        {
+          "param-id": "sc-01_odp.04"
+        },
+        {
+          "param-id": "sc-01_odp.05"
+        },
+        {
+          "param-id": "sc-01_odp.06"
+        },
+        {
+          "param-id": "sc-01_odp.07"
+        },
+        {
+          "param-id": "sc-01_odp.08"
+        },
+        {
+          "param-id": "sc-1_prm_1"
+        }
+      ],
+      "alters": []
     }
   }
+}
