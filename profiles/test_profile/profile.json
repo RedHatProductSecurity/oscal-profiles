@@ -3,7 +3,7 @@
     "uuid": "01b4b59d-3b0c-4947-858c-d78807dc1690",
     "metadata": {
       "title": "REPLACE_ME",
-      "last-modified": "2023-07-26T20:25:01.377547+00:00",
+      "last-modified": "2023-07-26T20:28:49.224122+00:00",
       "version": "REPLACE_ME",
       "oscal-version": "1.0.4"
     },
@@ -51,7 +51,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ac-01_odp.01"
+              "value": "ac-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -61,7 +61,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "AC-01_ODP[01]",
+            "AC-01_ODP[02]",
             "AC-01_ODP[02]"
           ]
         },
@@ -128,7 +128,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ac-16_odp.01"
+              "value": "ac-16_odp.02"
             },
             {
               "name": "aggregates",
@@ -138,7 +138,7 @@
           ],
           "label": "organization-defined types of security and privacy attributes",
           "values": [
-            "AC-16_ODP[01]",
+            "AC-16_ODP[02]",
             "AC-16_ODP[02]"
           ]
         },
@@ -148,7 +148,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ac-16_odp.03"
+              "value": "ac-16_odp.04"
             },
             {
               "name": "aggregates",
@@ -158,7 +158,7 @@
           ],
           "label": "organization-defined security and privacy attribute values",
           "values": [
-            "AC-16_ODP[03]",
+            "AC-16_ODP[04]",
             "AC-16_ODP[04]"
           ]
         },
@@ -168,7 +168,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ac-16_odp.05"
+              "value": "ac-16_odp.06"
             },
             {
               "name": "aggregates",
@@ -178,7 +178,7 @@
           ],
           "label": "organization-defined systems",
           "values": [
-            "AC-16_ODP[05]",
+            "AC-16_ODP[06]",
             "AC-16_ODP[06]"
           ]
         },
@@ -188,7 +188,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ac-16_odp.07"
+              "value": "ac-16_odp.08"
             },
             {
               "name": "aggregates",
@@ -198,7 +198,7 @@
           ],
           "label": "organization-defined security and privacy attributes",
           "values": [
-            "AC-16_ODP[07]",
+            "AC-16_ODP[08]",
             "AC-16_ODP[08]"
           ]
         },
@@ -208,7 +208,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ac-16_odp.07"
+              "value": "ac-16_odp.08"
             },
             {
               "name": "aggregates",
@@ -218,7 +218,7 @@
           ],
           "label": "organization-defined security and privacy attributes",
           "values": [
-            "AC-16_ODP[07]",
+            "AC-16_ODP[08]",
             "AC-16_ODP[08]"
           ]
         },
@@ -228,7 +228,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ac-16_odp.10"
+              "value": "ac-16_odp.11"
             },
             {
               "name": "aggregates",
@@ -238,7 +238,7 @@
           ],
           "label": "organization-defined frequency",
           "values": [
-            "AC-16_ODP[10]",
+            "AC-16_ODP[11]",
             "AC-16_ODP[11]"
           ]
         },
@@ -881,7 +881,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "at-01_odp.01"
+              "value": "at-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -891,7 +891,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "AT-01_ODP[01]",
+            "AT-01_ODP[02]",
             "AT-01_ODP[02]"
           ]
         },
@@ -922,7 +922,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "at-02_odp.01"
+              "value": "at-02_odp.02"
             },
             {
               "name": "aggregates",
@@ -932,7 +932,7 @@
           ],
           "label": "organization-defined frequency",
           "values": [
-            "AT-02_ODP[01]",
+            "AT-02_ODP[02]",
             "AT-02_ODP[02]"
           ]
         },
@@ -942,7 +942,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "at-02_odp.03"
+              "value": "at-02_odp.04"
             },
             {
               "name": "aggregates",
@@ -952,7 +952,7 @@
           ],
           "label": "organization-defined events",
           "values": [
-            "AT-02_ODP[03]",
+            "AT-02_ODP[04]",
             "AT-02_ODP[04]"
           ]
         },
@@ -980,7 +980,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "at-03_odp.01"
+              "value": "at-03_odp.02"
             },
             {
               "name": "aggregates",
@@ -990,7 +990,7 @@
           ],
           "label": "organization-defined roles and responsibilities",
           "values": [
-            "AT-03_ODP[01]",
+            "AT-03_ODP[02]",
             "AT-03_ODP[02]"
           ]
         },
@@ -1051,7 +1051,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "au-01_odp.01"
+              "value": "au-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -1061,7 +1061,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "AU-01_ODP[01]",
+            "AU-01_ODP[02]",
             "AU-01_ODP[02]"
           ]
         },
@@ -1173,7 +1173,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "au-02_odp.02"
+              "value": "au-02_odp.03"
             },
             {
               "name": "aggregates",
@@ -1183,7 +1183,7 @@
           ],
           "label": "organization-defined event types (subset of the event types defined in [AU-2a.](#au-2_smt.a)) along with the frequency of (or situation requiring) logging for each identified event type",
           "values": [
-            "AU-02_ODP[02]",
+            "AU-02_ODP[03]",
             "AU-02_ODP[03]"
           ]
         },
@@ -1313,7 +1313,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ca-01_odp.01"
+              "value": "ca-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -1323,7 +1323,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "CA-01_ODP[01]",
+            "CA-01_ODP[02]",
             "CA-01_ODP[02]"
           ]
         },
@@ -1399,7 +1399,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ca-07_odp.04"
+              "value": "ca-07_odp.06"
             },
             {
               "name": "aggregates",
@@ -1409,7 +1409,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "CA-07_ODP[04]",
+            "CA-07_ODP[06]",
             "CA-07_ODP[06]"
           ]
         },
@@ -1419,7 +1419,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ca-07_odp.05"
+              "value": "ca-07_odp.07"
             },
             {
               "name": "aggregates",
@@ -1429,7 +1429,7 @@
           ],
           "label": "organization-defined frequency",
           "values": [
-            "CA-07_ODP[05]",
+            "CA-07_ODP[07]",
             "CA-07_ODP[07]"
           ]
         },
@@ -1496,7 +1496,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cm-01_odp.01"
+              "value": "cm-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -1506,7 +1506,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "CM-01_ODP[01]",
+            "CM-01_ODP[02]",
             "CM-01_ODP[02]"
           ]
         },
@@ -1549,7 +1549,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cm-14_odp.01"
+              "value": "cm-14_odp.02"
             },
             {
               "name": "aggregates",
@@ -1559,7 +1559,7 @@
           ],
           "label": "organization-defined software and firmware components",
           "values": [
-            "CM-14_ODP[01]",
+            "CM-14_ODP[02]",
             "CM-14_ODP[02]"
           ]
         },
@@ -1704,7 +1704,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cm-07_odp.02"
+              "value": "cm-07_odp.06"
             },
             {
               "name": "aggregates",
@@ -1729,7 +1729,7 @@
           ],
           "label": "organization-defined prohibited or restricted functions, system ports, protocols, software, and/or services",
           "values": [
-            "CM-07_ODP[02]",
+            "CM-07_ODP[06]",
             "CM-07_ODP[03]",
             "CM-07_ODP[04]",
             "CM-07_ODP[05]",
@@ -1865,7 +1865,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cp-01_odp.01"
+              "value": "cp-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -1875,7 +1875,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "CP-01_ODP[01]",
+            "CP-01_ODP[02]",
             "CP-01_ODP[02]"
           ]
         },
@@ -1891,7 +1891,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cp-10_odp.01"
+              "value": "cp-10_odp.02"
             },
             {
               "name": "aggregates",
@@ -1901,7 +1901,7 @@
           ],
           "label": "organization-defined time period consistent with recovery time and recovery point objectives",
           "values": [
-            "CP-10_ODP[01]",
+            "CP-10_ODP[02]",
             "CP-10_ODP[02]"
           ]
         },
@@ -1950,7 +1950,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cp-02_odp.01"
+              "value": "cp-02_odp.02"
             },
             {
               "name": "aggregates",
@@ -1960,7 +1960,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "CP-02_ODP[01]",
+            "CP-02_ODP[02]",
             "CP-02_ODP[02]"
           ]
         },
@@ -1970,7 +1970,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cp-02_odp.03"
+              "value": "cp-02_odp.04"
             },
             {
               "name": "aggregates",
@@ -1980,7 +1980,7 @@
           ],
           "label": "organization-defined key contingency personnel (identified by name and/or by role) and organizational elements",
           "values": [
-            "CP-02_ODP[03]",
+            "CP-02_ODP[04]",
             "CP-02_ODP[04]"
           ]
         },
@@ -1990,7 +1990,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cp-02_odp.06"
+              "value": "cp-02_odp.07"
             },
             {
               "name": "aggregates",
@@ -2000,7 +2000,7 @@
           ],
           "label": "organization-defined key contingency personnel (identified by name and/or by role) and organizational elements",
           "values": [
-            "CP-02_ODP[06]",
+            "CP-02_ODP[07]",
             "CP-02_ODP[07]"
           ]
         },
@@ -2046,7 +2046,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "cp-04_odp.02"
+              "value": "cp-04_odp.03"
             },
             {
               "name": "aggregates",
@@ -2056,7 +2056,7 @@
           ],
           "label": "organization-defined tests",
           "values": [
-            "CP-04_ODP[02]",
+            "CP-04_ODP[03]",
             "CP-04_ODP[03]"
           ]
         },
@@ -2153,7 +2153,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ia-01_odp.01"
+              "value": "ia-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -2163,7 +2163,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "IA-01_ODP[01]",
+            "IA-01_ODP[02]",
             "IA-01_ODP[02]"
           ]
         },
@@ -2332,7 +2332,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ir-01_odp.01"
+              "value": "ir-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -2342,7 +2342,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "IR-01_ODP[01]",
+            "IR-01_ODP[02]",
             "IR-01_ODP[02]"
           ]
         },
@@ -2457,7 +2457,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ir-08_odp.06"
+              "value": "ir-08_odp.07"
             },
             {
               "name": "aggregates",
@@ -2472,7 +2472,7 @@
           ],
           "label": "organization-defined incident response personnel (identified by name and/or by role) and organizational elements",
           "values": [
-            "IR-08_ODP[06]",
+            "IR-08_ODP[07]",
             "IR-08_ODP[05]",
             "IR-08_ODP[07]"
           ]
@@ -2525,7 +2525,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ma-01_odp.01"
+              "value": "ma-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -2535,7 +2535,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "MA-01_ODP[01]",
+            "MA-01_ODP[02]",
             "MA-01_ODP[02]"
           ]
         },
@@ -2641,7 +2641,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "mp-01_odp.01"
+              "value": "mp-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -2651,7 +2651,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "MP-01_ODP[01]",
+            "MP-01_ODP[02]",
             "MP-01_ODP[02]"
           ]
         },
@@ -2673,7 +2673,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "mp-02_odp.01"
+              "value": "mp-02_odp.03"
             },
             {
               "name": "aggregates",
@@ -2683,7 +2683,7 @@
           ],
           "label": "organization-defined types of digital and/or non-digital media",
           "values": [
-            "MP-02_ODP[01]",
+            "MP-02_ODP[03]",
             "MP-02_ODP[03]"
           ]
         },
@@ -2693,7 +2693,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "mp-02_odp.02"
+              "value": "mp-02_odp.04"
             },
             {
               "name": "aggregates",
@@ -2703,7 +2703,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "MP-02_ODP[02]",
+            "MP-02_ODP[04]",
             "MP-02_ODP[04]"
           ]
         },
@@ -2737,7 +2737,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "mp-04_odp.01"
+              "value": "mp-04_odp.04"
             },
             {
               "name": "aggregates",
@@ -2757,7 +2757,7 @@
           ],
           "label": "organization-defined types of digital and/or non-digital media",
           "values": [
-            "MP-04_ODP[01]",
+            "MP-04_ODP[04]",
             "MP-04_ODP[02]",
             "MP-04_ODP[03]",
             "MP-04_ODP[04]"
@@ -2769,7 +2769,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "mp-04_odp.05"
+              "value": "mp-04_odp.06"
             },
             {
               "name": "aggregates",
@@ -2779,7 +2779,7 @@
           ],
           "label": "organization-defined controlled areas",
           "values": [
-            "MP-04_ODP[05]",
+            "MP-04_ODP[06]",
             "MP-04_ODP[06]"
           ]
         },
@@ -2807,7 +2807,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "mp-05_odp.02"
+              "value": "mp-05_odp.03"
             },
             {
               "name": "aggregates",
@@ -2817,7 +2817,7 @@
           ],
           "label": "organization-defined controls",
           "values": [
-            "MP-05_ODP[02]",
+            "MP-05_ODP[03]",
             "MP-05_ODP[03]"
           ]
         },
@@ -2845,7 +2845,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "mp-06_odp.01"
+              "value": "mp-06_odp.03"
             },
             {
               "name": "aggregates",
@@ -2860,7 +2860,7 @@
           ],
           "label": "organization-defined system media",
           "values": [
-            "MP-06_ODP[01]",
+            "MP-06_ODP[03]",
             "MP-06_ODP[02]",
             "MP-06_ODP[03]"
           ]
@@ -2871,7 +2871,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "mp-06_odp.04"
+              "value": "mp-06_odp.06"
             },
             {
               "name": "aggregates",
@@ -2886,7 +2886,7 @@
           ],
           "label": "organization-defined sanitization techniques and procedures",
           "values": [
-            "MP-06_ODP[04]",
+            "MP-06_ODP[06]",
             "MP-06_ODP[05]",
             "MP-06_ODP[06]"
           ]
@@ -2966,7 +2966,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pe-01_odp.01"
+              "value": "pe-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -2976,7 +2976,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "PE-01_ODP[01]",
+            "PE-01_ODP[02]",
             "PE-01_ODP[02]"
           ]
         },
@@ -3052,7 +3052,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pe-16_odp.01"
+              "value": "pe-16_odp.02"
             },
             {
               "name": "aggregates",
@@ -3062,7 +3062,7 @@
           ],
           "label": "organization-defined types of system components",
           "values": [
-            "PE-16_ODP[01]",
+            "PE-16_ODP[02]",
             "PE-16_ODP[02]"
           ]
         },
@@ -3141,7 +3141,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pe-03_odp.09"
+              "value": "pe-03_odp.10"
             },
             {
               "name": "aggregates",
@@ -3151,7 +3151,7 @@
           ],
           "label": "organization-defined frequency",
           "values": [
-            "PE-03_ODP[09]",
+            "PE-03_ODP[10]",
             "PE-03_ODP[10]"
           ]
         },
@@ -3269,7 +3269,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pl-01_odp.01"
+              "value": "pl-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -3279,7 +3279,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "PL-01_ODP[01]",
+            "PL-01_ODP[02]",
             "PL-01_ODP[02]"
           ]
         },
@@ -3343,7 +3343,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pm-17_odp.01"
+              "value": "pm-17_odp.02"
             },
             {
               "name": "aggregates",
@@ -3353,7 +3353,7 @@
           ],
           "label": "organization-defined frequency",
           "values": [
-            "PM-17_ODP[01]",
+            "PM-17_ODP[02]",
             "PM-17_ODP[02]"
           ]
         },
@@ -3384,7 +3384,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pm-25_odp.01"
+              "value": "pm-25_odp.04"
             },
             {
               "name": "aggregates",
@@ -3404,7 +3404,7 @@
           ],
           "label": "organization-defined frequency",
           "values": [
-            "PM-25_ODP[01]",
+            "PM-25_ODP[04]",
             "PM-25_ODP[02]",
             "PM-25_ODP[03]",
             "PM-25_ODP[04]"
@@ -3428,7 +3428,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pm-26_odp.01"
+              "value": "pm-26_odp.02"
             },
             {
               "name": "aggregates",
@@ -3438,7 +3438,7 @@
           ],
           "label": "organization-defined time period",
           "values": [
-            "PM-26_ODP[01]",
+            "PM-26_ODP[02]",
             "PM-26_ODP[02]"
           ]
         },
@@ -3490,7 +3490,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pm-31_odp.04"
+              "value": "pm-31_odp.05"
             },
             {
               "name": "aggregates",
@@ -3500,7 +3500,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "PM-31_ODP[04]",
+            "PM-31_ODP[05]",
             "PM-31_ODP[05]"
           ]
         },
@@ -3510,7 +3510,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pm-31_odp.06"
+              "value": "pm-31_odp.07"
             },
             {
               "name": "aggregates",
@@ -3520,7 +3520,7 @@
           ],
           "label": "organization-defined frequency",
           "values": [
-            "PM-31_ODP[06]",
+            "PM-31_ODP[07]",
             "PM-31_ODP[07]"
           ]
         },
@@ -3569,7 +3569,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ps-01_odp.01"
+              "value": "ps-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -3579,7 +3579,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "PS-01_ODP[01]",
+            "PS-01_ODP[02]",
             "PS-01_ODP[02]"
           ]
         },
@@ -3598,7 +3598,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ps-03_odp.01"
+              "value": "ps-03_odp.02"
             },
             {
               "name": "aggregates",
@@ -3608,7 +3608,7 @@
           ],
           "label": "organization-defined conditions requiring rescreening and, where rescreening is so indicated, the frequency of rescreening",
           "values": [
-            "PS-03_ODP[01]",
+            "PS-03_ODP[02]",
             "PS-03_ODP[02]"
           ]
         },
@@ -3696,7 +3696,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "pt-01_odp.01"
+              "value": "pt-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -3706,7 +3706,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "PT-01_ODP[01]",
+            "PT-01_ODP[02]",
             "PT-01_ODP[02]"
           ]
         },
@@ -3815,7 +3815,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ra-01_odp.01"
+              "value": "ra-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -3825,7 +3825,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "RA-01_ODP[01]",
+            "RA-01_ODP[02]",
             "RA-01_ODP[02]"
           ]
         },
@@ -3883,7 +3883,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ra-05_odp.01"
+              "value": "ra-05_odp.02"
             },
             {
               "name": "aggregates",
@@ -3893,7 +3893,7 @@
           ],
           "label": "organization-defined frequency and/or randomly in accordance with organization-defined process",
           "values": [
-            "RA-05_ODP[01]",
+            "RA-05_ODP[02]",
             "RA-05_ODP[02]"
           ]
         },
@@ -3969,7 +3969,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sa-01_odp.01"
+              "value": "sa-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -3979,7 +3979,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "SA-01_ODP[01]",
+            "SA-01_ODP[02]",
             "SA-01_ODP[02]"
           ]
         },
@@ -4070,7 +4070,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sa-15_odp.02"
+              "value": "sa-15_odp.03"
             },
             {
               "name": "aggregates",
@@ -4080,7 +4080,7 @@
           ],
           "label": "organization-defined security and privacy requirements",
           "values": [
-            "SA-15_ODP[02]",
+            "SA-15_ODP[03]",
             "SA-15_ODP[03]"
           ]
         },
@@ -4228,7 +4228,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sa-08_odp.01"
+              "value": "sa-08_odp.02"
             },
             {
               "name": "aggregates",
@@ -4238,7 +4238,7 @@
           ],
           "label": "organization-defined systems security and privacy engineering principles",
           "values": [
-            "SA-08_ODP[01]",
+            "SA-08_ODP[02]",
             "SA-08_ODP[02]"
           ]
         },
@@ -4410,7 +4410,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sc-01_odp.01"
+              "value": "sc-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -4420,7 +4420,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "SC-01_ODP[01]",
+            "SC-01_ODP[02]",
             "SC-01_ODP[02]"
           ]
         },
@@ -4478,7 +4478,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sc-16_odp.01"
+              "value": "sc-16_odp.02"
             },
             {
               "name": "aggregates",
@@ -4488,7 +4488,7 @@
           ],
           "label": "organization-defined security and privacy attributes",
           "values": [
-            "SC-16_ODP[01]",
+            "SC-16_ODP[02]",
             "SC-16_ODP[02]"
           ]
         },
@@ -4642,7 +4642,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sc-36_odp.02"
+              "value": "sc-36_odp.04"
             },
             {
               "name": "aggregates",
@@ -4651,7 +4651,7 @@
             }
           ],
           "values": [
-            "SC-36_ODP[02]",
+            "SC-36_ODP[04]",
             "SC-36_ODP[04]"
           ],
           "select": {
@@ -4667,7 +4667,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sc-36_odp.01"
+              "value": "sc-36_odp.03"
             },
             {
               "name": "aggregates",
@@ -4677,7 +4677,7 @@
           ],
           "label": "organization-defined processing and storage components",
           "values": [
-            "SC-36_ODP[01]",
+            "SC-36_ODP[03]",
             "SC-36_ODP[03]"
           ]
         },
@@ -4735,7 +4735,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sc-40_odp.01"
+              "value": "sc-40_odp.03"
             },
             {
               "name": "aggregates",
@@ -4745,7 +4745,7 @@
           ],
           "label": "organization-defined wireless links",
           "values": [
-            "SC-40_ODP[01]",
+            "SC-40_ODP[03]",
             "SC-40_ODP[03]"
           ]
         },
@@ -4755,7 +4755,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sc-40_odp.02"
+              "value": "sc-40_odp.04"
             },
             {
               "name": "aggregates",
@@ -4765,7 +4765,7 @@
           ],
           "label": "organization-defined types of signal parameter attacks or references to sources for such attacks",
           "values": [
-            "SC-40_ODP[02]",
+            "SC-40_ODP[04]",
             "SC-40_ODP[04]"
           ]
         },
@@ -5027,7 +5027,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "si-01_odp.01"
+              "value": "si-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -5037,7 +5037,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "SI-01_ODP[01]",
+            "SI-01_ODP[02]",
             "SI-01_ODP[02]"
           ]
         },
@@ -5158,7 +5158,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "si-17_odp.01"
+              "value": "si-17_odp.02"
             },
             {
               "name": "aggregates",
@@ -5168,7 +5168,7 @@
           ],
           "label": "organization-defined list of failure conditions and associated fail-safe procedures",
           "values": [
-            "SI-17_ODP[01]",
+            "SI-17_ODP[02]",
             "SI-17_ODP[02]"
           ]
         },
@@ -5190,7 +5190,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "si-18_odp.01"
+              "value": "si-18_odp.04"
             },
             {
               "name": "aggregates",
@@ -5210,7 +5210,7 @@
           ],
           "label": "organization-defined frequency",
           "values": [
-            "SI-18_ODP[01]",
+            "SI-18_ODP[04]",
             "SI-18_ODP[02]",
             "SI-18_ODP[03]",
             "SI-18_ODP[04]"
@@ -5462,7 +5462,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "si-06_odp.01"
+              "value": "si-06_odp.02"
             },
             {
               "name": "aggregates",
@@ -5472,7 +5472,7 @@
           ],
           "label": "organization-defined security and privacy functions",
           "values": [
-            "SI-06_ODP[01]",
+            "SI-06_ODP[02]",
             "SI-06_ODP[02]"
           ]
         },
@@ -5503,7 +5503,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "si-07_odp.01"
+              "value": "si-07_odp.03"
             },
             {
               "name": "aggregates",
@@ -5518,7 +5518,7 @@
           ],
           "label": "organization-defined software, firmware, and information",
           "values": [
-            "SI-07_ODP[01]",
+            "SI-07_ODP[03]",
             "SI-07_ODP[02]",
             "SI-07_ODP[03]"
           ]
@@ -5529,7 +5529,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "si-07_odp.04"
+              "value": "si-07_odp.06"
             },
             {
               "name": "aggregates",
@@ -5544,7 +5544,7 @@
           ],
           "label": "organization-defined actions",
           "values": [
-            "SI-07_ODP[04]",
+            "SI-07_ODP[06]",
             "SI-07_ODP[05]",
             "SI-07_ODP[06]"
           ]
@@ -5660,7 +5660,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sr-01_odp.01"
+              "value": "sr-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -5670,7 +5670,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "SR-01_ODP[01]",
+            "SR-01_ODP[02]",
             "SR-01_ODP[02]"
           ]
         },
