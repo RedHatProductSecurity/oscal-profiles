@@ -23,18 +23,23 @@ Ensure that audit records contain information that establishes the following:
 
 - \[f.\] Identity of any individuals, subjects, or objects/entities associated with the event.
 
+## Control Assessment Objective
+
+- \[AU-03a.\] audit records contain information that establishes what type of event occurred;
+
+- \[AU-03b.\] audit records contain information that establishes when the event occurred;
+
+- \[AU-03c.\] audit records contain information that establishes where the event occurred;
+
+- \[AU-03d.\] audit records contain information that establishes the source of the event;
+
+- \[AU-03e.\] audit records contain information that establishes the outcome of the event;
+
+- \[AU-03f.\] audit records contain information that establishes the identity of any individuals, subjects, or objects/entities associated with the event.
+
 ## Control guidance
 
 Audit record content that may be necessary to support the auditing function includes event descriptions (item a), time stamps (item b), source and destination addresses (item c), user or process identifiers (items d and f), success or fail indications (item e), and filenames involved (items a, c, e, and f) . Event outcomes include indicators of event success or failure and event-specific results, such as the system security and privacy posture after the event occurred. Organizations consider how audit records can reveal information about individuals that may give rise to privacy risks and how best to mitigate such risks. For example, there is the potential to reveal personally identifiable information in the audit trail, especially if the trail records inputs or is based on patterns or time of usage.
-
-## Control assessment-objective
-
-audit records contain information that establishes what type of event occurred;
-audit records contain information that establishes when the event occurred;
-audit records contain information that establishes where the event occurred;
-audit records contain information that establishes the source of the event;
-audit records contain information that establishes the outcome of the event;
-audit records contain information that establishes the identity of any individuals, subjects, or objects/entities associated with the event.
 
 # Editable Content
 
