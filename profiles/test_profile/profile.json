@@ -3,7 +3,7 @@
     "uuid": "24d83185-c825-4f31-bc1c-92555ec0d2ee",
     "metadata": {
       "title": "REPLACE_ME",
-      "last-modified": "2023-07-28T16:11:39.848466+00:00",
+      "last-modified": "2023-07-28T16:16:10.400103+00:00",
       "version": "REPLACE_ME",
       "oscal-version": "1.0.4"
     },
@@ -51,7 +51,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "ac-01_odp.01"
+              "value": "ac-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -61,7 +61,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "AC-01_ODP[01]",
+            "AC-01_ODP[02]",
             "AC-01_ODP[02]"
           ]
         },
@@ -134,7 +134,7 @@
             {
               "name": "aggregates",
               "ns": "http://csrc.nist.gov/ns/rmf",
-              "value": "sc-01_odp.01"
+              "value": "sc-01_odp.02"
             },
             {
               "name": "aggregates",
@@ -144,7 +144,7 @@
           ],
           "label": "organization-defined personnel or roles",
           "values": [
-            "SC-01_ODP[01]",
+            "SC-01_ODP[02]",
             "SC-01_ODP[02]"
           ]
         }
