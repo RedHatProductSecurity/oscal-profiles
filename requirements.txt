@@ -187,7 +187,7 @@ toml==0.10.2
     # via datamodel-code-generator
 tomli==2.0.1
     # via black
-trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@main
+trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@1d24f1d0f769558716334e4bc34b82406ac811d5
     # via -r requirements.in
 typing-extensions==4.7.1
     # via
