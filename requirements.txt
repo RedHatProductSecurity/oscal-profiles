@@ -34,7 +34,7 @@ click==8.1.6
     # via black
 cmarkgfm==0.6.0
     # via compliance-trestle
-compliance-trestle @ git+https://github.com/RedHatProductSecurity/compliance-trestle.git@bb19091d08025f630379da59cba42b64e4701839
+compliance-trestle @ git+https://github.com/IBM/compliance-trestle.git@01a5a3358b7f1c35d98ea5ab32d51bbc107ff5a0
     # via trestlebot
 cryptography==41.0.2
     # via
@@ -187,7 +187,7 @@ toml==0.10.2
     # via datamodel-code-generator
 tomli==2.0.1
     # via black
-trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@1d24f1d0f769558716334e4bc34b82406ac811d5
+trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.1.0
     # via -r requirements.in
 typing-extensions==4.7.1
     # via

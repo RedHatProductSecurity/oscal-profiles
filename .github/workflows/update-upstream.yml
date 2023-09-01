@@ -42,7 +42,7 @@ jobs:
           trestle import -f https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json -o "${FEDRAMP_PROFILE_NAME}"
           trestle href --name "${FEDRAMP_PROFILE_NAME}" -hr "trestle://catalogs/${NIST_CATALOG_NAME}/catalog.json"
       - name: Update content
-        uses: RedHatProductSecurity/trestle-bot@1d24f1d0f769558716334e4bc34b82406ac811d5
+        uses: RedHatProductSecurity/trestle-bot@v0.1.0
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
