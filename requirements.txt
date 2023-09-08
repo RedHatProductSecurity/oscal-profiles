@@ -61,7 +61,7 @@ gitdb==4.0.10
     # via gitpython
 github3-py==4.0.1
     # via trestlebot
-gitpython==3.1.32
+gitpython==3.1.35
     # via trestlebot
 h11==0.14.0
     # via httpcore
@@ -187,7 +187,7 @@ toml==0.10.2
     # via datamodel-code-generator
 tomli==2.0.1
     # via black
-trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.1.0
+trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.1.1
     # via -r requirements.in
 typing-extensions==4.7.1
     # via
