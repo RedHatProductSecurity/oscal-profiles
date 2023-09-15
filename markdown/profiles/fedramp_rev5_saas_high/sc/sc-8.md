@@ -34,7 +34,7 @@ the {{ insert: param, sc-08_odp }} of transmitted information is/are protected.
 
 For each instance of data in transit, confidentiality AND integrity should be through cryptography as specified in SC-8 (1), physical means as specified in SC-8 (5), or in combination.
 
- 
+
 
 For clarity, this control applies to all data in transit. Examples include the following data flows:
 
@@ -47,36 +47,36 @@ For clarity, this control applies to all data in transit. Examples include the f
 *  Flows from management tools required for their work – e.g. log collection, scanning, etc.
 
 
- 
+
 
 The following applies only when choosing SC-8 (5) in lieu of SC-8 (1).
 
-FedRAMP-Defined Assignment / Selection Parameters 
+FedRAMP-Defined Assignment / Selection Parameters
 
 SC-8 (5)-1 [a hardened or alarmed carrier Protective Distribution System (PDS) when outside of Controlled Access Area (CAA)]
 
 SC-8 (5)-2 [prevent unauthorized disclosure of information AND detect changes to information]
 SC-8 (5) applies when physical protection has been selected as the method to protect confidentiality and integrity. For physical protection, data in transit must be in either a Controlled Access Area (CAA), or a Hardened or alarmed PDS.
 
- 
+
 
 Hardened or alarmed PDS: Shall be as defined in SECTION X - CATEGORY 2 PDS INSTALLATION GUIDANCE of CNSSI No.7003, titled PROTECTED DISTRIBUTION SYSTEMS (PDS). Per the CNSSI No. 7003 Section VIII, PDS must originate and terminate in a Controlled Access Area (CAA).
 
- 
+
 
 Controlled Access Area (CAA): Data will be considered physically protected, and in a CAA if it meets Section 2.3 of the DHS’s Recommended Practice: Improving Industrial Control System Cybersecurity with Defense-in-Depth Strategies. CSPs can meet Section 2.3 of the DHS’ recommended practice by satisfactory implementation of the following controls PE-2 (1), PE-2 (2), PE-2 (3), PE-3 (2), PE-3 (3), PE-6 (2), and PE-6 (3).
 
- 
+
 
 Note: When selecting SC-8 (5), the above SC-8(5), and the above referenced PE controls must be added to the SSP.
 
- 
+
 
 CNSSI No.7003 can be accessed here:
 
 https://www.dcsa.mil/Portals/91/documents/ctp/nao/CNSSI_7003_PDS_September_2015.pdf
 
- 
+
 
 DHS Recommended Practice: Improving Industrial Control System Cybersecurity with Defense-in-Depth Strategies can be accessed here:
 
