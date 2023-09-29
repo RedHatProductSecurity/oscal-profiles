@@ -16,7 +16,7 @@ bcrypt==4.0.1
     # via paramiko
 black==23.7.0
     # via datamodel-code-generator
-certifi==2023.5.7
+certifi==2023.7.22
     # via
     #   httpcore
     #   httpx
@@ -36,7 +36,7 @@ cmarkgfm==0.6.0
     # via compliance-trestle
 compliance-trestle @ git+https://github.com/IBM/compliance-trestle.git@01a5a3358b7f1c35d98ea5ab32d51bbc107ff5a0
     # via trestlebot
-cryptography==41.0.2
+cryptography==41.0.3
     # via
     #   compliance-trestle
     #   paramiko
