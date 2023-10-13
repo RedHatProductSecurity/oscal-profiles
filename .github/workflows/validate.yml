@@ -29,7 +29,9 @@ jobs:
     
   call-autofix:
     needs: [test]
-    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    if: |
+      always() && contains(needs.*.result, 'failure')
+      && github.event.pull_request.base.repo.url == github.event.pull_request.head.repo.url
     uses: ./.github/workflows/autofix-profile.yml
     with:
       branch: ${{ github.head_ref }}
