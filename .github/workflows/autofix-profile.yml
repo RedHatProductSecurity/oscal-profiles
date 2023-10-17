@@ -30,7 +30,7 @@ jobs:
           token: ${{ steps.get_installation_token.outputs.token }}
       - name: Autofix profile
         id: autofix-profile
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@main
+        uses: RedHatProductSecurity/trestle-bot/actions/autosyncv0.3.0
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"

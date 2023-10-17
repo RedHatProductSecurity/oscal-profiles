@@ -20,7 +20,7 @@ jobs:
           ref:  ${{ github.head_ref }}
       - name: Check profile
         id: check-profile
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@main
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.3.0
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"

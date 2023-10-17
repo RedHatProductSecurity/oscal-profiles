@@ -34,7 +34,7 @@ click==8.1.6
     # via black
 cmarkgfm==0.6.0
     # via compliance-trestle
-compliance-trestle @ git+https://github.com/IBM/compliance-trestle.git@01a5a3358b7f1c35d98ea5ab32d51bbc107ff5a0
+compliance-trestle @ git+https://github.com/IBM/compliance-trestle.git@725f6980f83b040fec4145cfebd4c80af2f7196f
     # via trestlebot
 cryptography==41.0.2
     # via
@@ -127,10 +127,11 @@ prance==23.6.21.0
     # via datamodel-code-generator
 pycparser==2.21
     # via cffi
-pydantic[email]==1.10.11
+pydantic[email]==1.10.2
     # via
     #   compliance-trestle
     #   datamodel-code-generator
+    #   trestlebot
 pyjwt[crypto]==2.8.0
     # via github3-py
 pynacl==1.5.0
@@ -166,6 +167,7 @@ ruamel-yaml==0.17.32
     # via
     #   compliance-trestle
     #   prance
+    #   trestlebot
 ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
 six==1.16.0
@@ -187,7 +189,7 @@ toml==0.10.2
     # via datamodel-code-generator
 tomli==2.0.1
     # via black
-trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.1.1
+trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.3.0
     # via -r requirements.in
 typing-extensions==4.7.1
     # via
