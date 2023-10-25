@@ -38,7 +38,7 @@ jobs:
       - name: Update profiles
         run: |
           rm -rf "profiles/${FEDRAMP_PROFILE_NAME}"
-          trestle import -f ${FEDRAMP_PROFILE_URL} -o "${FEDRAMP_PROFILE_NAME}"
+          trestle import -f "${FEDRAMP_PROFILE_URL}" -o "${FEDRAMP_PROFILE_NAME}"
           trestle href --name "${FEDRAMP_PROFILE_NAME}" -hr "trestle://catalogs/${NIST_CATALOG_NAME}/catalog.json"
       - name: Update content
         uses: peter-evans/create-pull-request@v5.0.2
