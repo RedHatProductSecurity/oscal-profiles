@@ -5,6 +5,8 @@ on: workflow_dispatch
 env:
   FEDRAMP_PROFILE_NAME: "fedramp_rev5_high"
   NIST_CATALOG_NAME: "nist_rev5_800_53"
+  NIST_CATALOG_URL: "https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json"
+  FEDRAMP_PROFILE_URL: "https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json"
 
 jobs:
   update:
@@ -32,22 +34,21 @@ jobs:
       - name: Update catalogs
         run: |
           rm -rf "catalogs/${NIST_CATALOG_NAME}"
-          trestle import -f https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json -o "${NIST_CATALOG_NAME}"
+          trestle import -f "${NIST_CATALOG_URL}" -o "${NIST_CATALOG_NAME}"
       - name: Update profiles
         run: |
           rm -rf "profiles/${FEDRAMP_PROFILE_NAME}"
-          trestle import -f https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json -o "${FEDRAMP_PROFILE_NAME}"
+          trestle import -f ${FEDRAMP_PROFILE_URL} -o "${FEDRAMP_PROFILE_NAME}"
           trestle href --name "${FEDRAMP_PROFILE_NAME}" -hr "trestle://catalogs/${NIST_CATALOG_NAME}/catalog.json"
       - name: Update content
-        uses: RedHatProductSecurity/trestle-bot@v0.1.1
+        uses: peter-evans/create-pull-request@v5.0.2
         with:
-          markdown_path: "markdown/profiles"
-          oscal_model: "profile"
-          file_pattern: "*.json"
-          branch: "autoupdate-${{ github.run_id }}"
-          target_branch: "main"
-          skip_assemble: true
-          skip_regenerate: true
-          commit_user_name: "trestle-bot[bot]"
-          commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
-          github_token: ${{ steps.get_installation_token.outputs.token }}
+          base: main
+          branch: autoupdate-${{ github.run_id }}
+          delete-branch: true
+          commit-message: "Update vendored OSCAL content"
+          add-paths: |
+            catalogs/
+            profiles/
+          token: ${{ steps.get_installation_token.outputs.token }}
+          committer: trestle-bot[bot] <136850459+trestle-bot[bot]@users.noreply.github.com>
