@@ -10,9 +10,6 @@ jobs:
   update:
     name: Update content
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
       - name: Generate app token
         uses: tibdex/github-app-token@v1

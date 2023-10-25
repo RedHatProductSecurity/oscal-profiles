@@ -4,7 +4,8 @@ name: MegaLinter
 on:
   push:
   pull_request:
-    branches: main
+    branches: 
+    - main
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
