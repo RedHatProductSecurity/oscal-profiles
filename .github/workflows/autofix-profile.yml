@@ -1,4 +1,5 @@
 name: Profile Autofix
+
 on:
   workflow_call:
     inputs:

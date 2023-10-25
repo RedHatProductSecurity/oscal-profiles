@@ -1,4 +1,5 @@
 name: Regenerate profile content
+
 on:
   push:
     branches:
