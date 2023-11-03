@@ -2,12 +2,16 @@ name: Evaluate profiles
 
 on:
   pull_request:
-    types: [ opened, ready_for_review, reopened, synchronize ]
     branches:
       - main
     paths:
       - 'profiles/**'
       - 'markdown/profiles/**'
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: Evaluate profiles
@@ -17,8 +21,6 @@ jobs:
     steps:
       - name: Clone
         uses: actions/checkout@v3
-        with:
-          ref:  ${{ github.head_ref }}
       - name: Check profile
         id: check-profile
         uses: RedHatProductSecurity/trestle-bot@v0.1.1
@@ -30,7 +32,9 @@ jobs:
     
   call-autofix:
     needs: [test]
-    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    if: |
+      always() && contains(needs.*.result, 'failure')
+      && github.event.pull_request.base.repo.url == github.event.pull_request.head.repo.url
     uses: ./.github/workflows/autofix-profile.yml
     with:
       branch: ${{ github.head_ref }}
