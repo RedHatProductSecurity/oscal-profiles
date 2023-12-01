@@ -28,7 +28,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Install Trestle
-        run: make trestle-install
+        run: python3 -m pip install --upgrade pip setuptools && python3 -m pip install -r requirements.txt
       - name: Update catalogs
         run: |
           rm -rf "catalogs/${NIST_CATALOG_NAME}"
@@ -39,7 +39,7 @@ jobs:
           trestle import -f https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json -o "${FEDRAMP_PROFILE_NAME}"
           trestle href --name "${FEDRAMP_PROFILE_NAME}" -hr "trestle://catalogs/${NIST_CATALOG_NAME}/catalog.json"
       - name: Update content
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.3.0
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.4.2
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"

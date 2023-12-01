@@ -12,7 +12,7 @@ Some the directories in this repository are managed through automated processes 
 
 - catalogs: This stores OSCAL Catalogs installed in the trestle workspace.
 - profiles (FedRAMP only) - This stores OSCAL Profiles installed in the trestle workspace.
-- vendor - This stores automation managed in a central repository that is vendored in.
+
 
 For information on how this data is managed, see the [FAQs](./docs/faqs.md).
 
