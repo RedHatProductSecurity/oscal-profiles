@@ -39,7 +39,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Install Trestlebot
-        run: make trestlebot-install
+        run: python3 -m pip install --upgrade pip setuptools && python3 -m pip install -r requirements.txt
       - name: Create new profile with imports
         run: |
           python3 scripts/set_default_profile.py --import_path "${IMPORT_TYPE}s/${IMPORT_NAME}/${IMPORT_TYPE}.json" \
