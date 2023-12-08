@@ -42,7 +42,9 @@ cryptography==41.0.3
     #   paramiko
     #   pyjwt
 datamodel-code-generator[http]==0.21.1
-    # via compliance-trestle
+    # via
+    #   compliance-trestle
+    #   datamodel-code-generator
 defusedxml==0.7.1
     # via compliance-trestle
 dnspython==2.4.0
@@ -133,7 +135,9 @@ pydantic[email]==1.10.2
     #   datamodel-code-generator
     #   trestlebot
 pyjwt[crypto]==2.8.0
-    # via github3-py
+    # via
+    #   github3-py
+    #   pyjwt
 pynacl==1.5.0
     # via paramiko
 pyrsistent==0.19.3
@@ -191,7 +195,7 @@ tomli==2.0.1
     # via black
 trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.3.0
     # via -r requirements.in
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   black
     #   pydantic
