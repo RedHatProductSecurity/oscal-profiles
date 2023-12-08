@@ -20,7 +20,7 @@ jobs:
           private_key: ${{ secrets.PRIVATE_KEY }}
           permissions: >-
             {"actions": "write"}
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         with:
           github-token: ${{ steps.get_installation_token.outputs.token }}
           script: |
