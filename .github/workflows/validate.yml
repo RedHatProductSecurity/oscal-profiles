@@ -20,7 +20,7 @@ jobs:
       contents: read
     steps:
       - name: Clone
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Check profile
         id: check-profile
         uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.3.0
