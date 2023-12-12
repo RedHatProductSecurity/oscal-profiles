@@ -16,7 +16,7 @@
 #    under the License.
 
 """
-Read in a profile created by trestle and set up default profile fields
+Read in a profile created by trestle and set up default profile fields.
 
 Author: Jenn Power <jpower@redhat.com>
 """
@@ -26,14 +26,20 @@ import argparse
 from trestlebot.tasks.authored.profile import AuthoredProfile
 
 
-def main():
-    p = argparse.ArgumentParser(description="Set default component fields")
-    p.add_argument("--profile_name", required=True)
-    p.add_argument("--import_path", required=True)
-    p.add_argument("--trestle_root", required=True)
+def main() -> None:
+    p = argparse.ArgumentParser(description="Set default profile fields")
+    p.add_argument(
+        "--profile_name", help="Name of the profile to create", required=True
+    )
+    p.add_argument(
+        "--import_path",
+        help="Path to the profile or catalog to import in trestle workspace",
+        required=True,
+    )
+    p.add_argument("--trestle_root", default=".", required=False)
     args = p.parse_args()
 
-    authored_profile = AuthoredProfile(args.trestle_root)
+    authored_profile: AuthoredProfile = AuthoredProfile(args.trestle_root)
 
     authored_profile.create_new_default(
         args.import_path,
@@ -43,4 +49,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
