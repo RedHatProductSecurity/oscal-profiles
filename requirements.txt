@@ -127,7 +127,7 @@ prance==23.6.21.0
     # via datamodel-code-generator
 pycparser==2.21
     # via cffi
-pydantic[email]==1.10.2
+pydantic[email]==1.10.13
     # via
     #   compliance-trestle
     #   datamodel-code-generator
@@ -190,7 +190,7 @@ toml==0.10.2
     # via datamodel-code-generator
 tomli==2.0.1
     # via black
-trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.3.0
+trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.4.2
     # via -r requirements.in
 typing-extensions==4.7.1
     # via
