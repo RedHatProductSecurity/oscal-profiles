@@ -192,7 +192,7 @@ tomli==2.0.1
     # via black
 trestlebot @ git+https://github.com/RedHatProductSecurity/trestle-bot@v0.4.2
     # via -r requirements.in
-typing-extensions==4.7.1
+typing-extensions==4.9.0
     # via
     #   black
     #   pydantic
