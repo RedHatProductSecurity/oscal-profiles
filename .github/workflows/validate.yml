@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Check profile
         id: check-profile
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.4.2
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.5.0
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
