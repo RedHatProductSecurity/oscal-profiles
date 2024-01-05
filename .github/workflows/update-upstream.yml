@@ -1,6 +1,10 @@
 name: Update content from upstream (NIST and FedRAMP)
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  # Schedule every Sunday at 5:00
+  schedule:
+    - cron: "0 5 * * 0"
 
 env:
   FEDRAMP_PROFILE_NAME: "fedramp_rev5_high"
