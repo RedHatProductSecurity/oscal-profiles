@@ -9,7 +9,7 @@ on:
 env:
   FEDRAMP_PROFILE_NAME: "fedramp_rev5_high"
   NIST_CATALOG_NAME: "nist_rev5_800_53"
-  FEDRAMP_REPO_REF: "master"
+  FEDRAMP_REPO_REF: "d9cbac30174fa9d52540eba34425bdb5c18ff4d8"
   NIST_REPO_REF: "690f517daaf3a6cbb4056d3cde6eae2756765620"
 
 jobs:
@@ -40,6 +40,9 @@ jobs:
           rm -rf "profiles/${FEDRAMP_PROFILE_NAME}"
           trestle import -f "https://raw.githubusercontent.com/GSA/fedramp-automation/${FEDRAMP_REPO_REF}/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json" -o "${FEDRAMP_PROFILE_NAME}"
           trestle href --name "${FEDRAMP_PROFILE_NAME}" -hr "trestle://catalogs/${NIST_CATALOG_NAME}/catalog.json"
+      - name: Configure git to trust the github workspace
+        run: |
+          git config --global --add safe.directory "${GITHUB_WORKSPACE}"
       - name: Update content
         uses: peter-evans/create-pull-request@v5.0.2
         with:

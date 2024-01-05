@@ -44,6 +44,9 @@ jobs:
           OUTPUT:  ${{ github.event.inputs.output }}
           IMPORT_NAME: ${{ github.event.inputs.import_name }}
           IMPORT_TYPE: ${{ github.event.inputs.import_type }}
+      - name: Configure git to trust the github workspace
+        run: |
+          git config --global --add safe.directory "${GITHUB_WORKSPACE}"
       - name: Generate and PR new profile
         id: generate-profile
         run: |
