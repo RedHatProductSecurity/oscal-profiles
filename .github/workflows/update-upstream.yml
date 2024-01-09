@@ -6,11 +6,11 @@ on:
         fedramp_repo_ref:
           required: false
           default: "master"
-          description: FedRAMP repo ref
+          description: GSA/fedramp-automation repository reference
         nist_repo_ref:
           required: false
           default: "master"
-          description: NIST repo ref
+          description: usnistgov/oscal-content repository reference
         fedramp_profile_name:
           required: false
           default: "fedramp_rev5_high"
