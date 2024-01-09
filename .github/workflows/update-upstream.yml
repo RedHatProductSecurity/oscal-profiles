@@ -1,12 +1,24 @@
 name: Update content from upstream (NIST and FedRAMP)
 
-on: workflow_dispatch
-
-env:
-  FEDRAMP_PROFILE_NAME: "fedramp_rev5_high"
-  NIST_CATALOG_NAME: "nist_rev5_800_53"
-  FEDRAMP_REPO_REF: "master"
-  NIST_REPO_REF: "690f517daaf3a6cbb4056d3cde6eae2756765620"
+on: 
+  workflow_dispatch:
+    inputs:
+        fedramp_repo_ref:
+          required: false
+          default: "master"
+          description: FedRAMP repo ref
+        nist_repo_ref:
+          required: false
+          default: "master"
+          description: NIST repo ref
+        fedramp_profile_name:
+          required: false
+          default: "fedramp_rev5_high"
+          description: FedRAMP profile name
+        nist_catalog_name:
+          required: false
+          default: "nist_rev5_800_53"
+          description: NIST catalog name
 
 jobs:
   update:
@@ -32,10 +44,17 @@ jobs:
       - name: Install Trestle
         run: python3 -m pip install --upgrade pip setuptools && python3 -m pip install -r requirements.txt
       - name: Update catalogs
+        env:
+          NIST_REPO_REF: ${{ github.event.inputs.nist_repo_ref }}
+          NIST_CATALOG_NAME: ${{ github.event.inputs.nist_catalog_name }}
         run: |
           rm -rf "catalogs/${NIST_CATALOG_NAME}"
           trestle import -f "https://raw.githubusercontent.com/usnistgov/oscal-content/${NIST_REPO_REF}/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json" -o "${NIST_CATALOG_NAME}"
       - name: Update profiles
+        env:
+          FEDRAMP_REPO_REF: ${{ github.event.inputs.fedramp_repo_ref }}
+          FEDRAMP_PROFILE_NAME: ${{ github.event.inputs.fedramp_profile_name }}
+          NIST_CATALOG_NAME: ${{ github.event.inputs.nist_catalog_name }}
         run: |
           rm -rf "profiles/${FEDRAMP_PROFILE_NAME}"
           trestle import -f "https://raw.githubusercontent.com/GSA/fedramp-automation/${FEDRAMP_REPO_REF}/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json" -o "${FEDRAMP_PROFILE_NAME}"
