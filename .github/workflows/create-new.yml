@@ -21,6 +21,8 @@ jobs:
   create-profile:
     name: Create profile
     runs-on: ubuntu-latest
+    container:
+      image: quay.io/continuouscompliance/trestle-bot:v0.5.0
     steps:
       - name: Generate app token
         uses: tibdex/github-app-token@v2.1.0
@@ -34,12 +36,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ steps.get_installation_token.outputs.token }}
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.8
-      - name: Install Trestlebot
-        run: python3 -m pip install --upgrade pip setuptools && python3 -m pip install -r requirements.txt
       - name: Create new profile with imports
         run: |
           python3 scripts/set_default_profile.py --import_path "${IMPORT_TYPE}s/${IMPORT_NAME}/${IMPORT_TYPE}.json" \
@@ -48,19 +44,27 @@ jobs:
           OUTPUT:  ${{ github.event.inputs.output }}
           IMPORT_NAME: ${{ github.event.inputs.import_name }}
           IMPORT_TYPE: ${{ github.event.inputs.import_type }}
+      - name: Configure git to trust the github workspace
+        run: |
+          git config --global --add safe.directory "${GITHUB_WORKSPACE}"
       - name: Generate and PR new profile
         id: generate-profile
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.5.0
-        with:
-          markdown_path: "markdown/profiles"
-          oscal_model: "profile"
-          branch: "profile-create-${{ github.run_id }}"
-          target_branch: "main"
-          file_pattern: "*.json,markdown/*"
-          skip_items: "fedramp_rev5_high"
-          skip_assemble: true
-          commit_user_name: "trestle-bot[bot]"
-          commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
-          commit_message: "adds profile ${{ github.event.inputs.output }}"
-          pull_request_title: "Add profile ${{ github.event.inputs.output }}"
-          github_token: ${{ steps.get_installation_token.outputs.token }}
+        run: |
+          trestlebot-autosync \
+          --markdown-path="markdown/profiles" \
+          --oscal-model="profile" \
+          --commit-message="adds profile ${OUTPUT}" \
+          --pull-request-title="Add profile ${OUTPUT}" \
+          --branch="profile-create-${{ github.run_id }}" \
+          --file-patterns="*.json,markdown/*" \
+          --committer-name="trestle-bot[bot]" \
+          --committer-email="136850459+trestle-bot[bot]@users.noreply.github.com" \
+          --author-name="${{ github.actor }}" \
+          --author-email="${{ github.actor }}@users.noreply.github.com" \
+          --target-branch="main" \
+          --skip-items="fedramp_rev5_high" \
+          --skip-assemble \
+          --with-token - <<<"${GITHUB_TOKEN}"
+        env:
+          GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+          OUTPUT: ${{ github.event.inputs.output }}
