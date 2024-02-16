@@ -27,7 +27,7 @@ jobs:
           token: ${{ steps.get_installation_token.outputs.token }}
       - name: Regenerate profiles
         id: regenerate
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.5.0
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.7.0
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
