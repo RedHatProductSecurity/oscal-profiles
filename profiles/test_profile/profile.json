@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "uuid": "e16c769f-8d2c-42d5-bf81-2c19d68a9cd1",
+    "metadata": {
+      "title": "REPLACE_ME",
+      "last-modified": "2024-02-21T18:03:02.274735+00:00",
+      "version": "REPLACE_ME",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://profiles/fedramp_rev5_high/profile.json",
+        "include-all": {}
+      }
+    ],
+    "merge": {
+      "combine": {
+        "method": "merge"
+      },
+      "as-is": true
+    }
+  }
+}
