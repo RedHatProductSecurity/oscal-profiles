@@ -27,28 +27,58 @@ x-trestle-set-params:
   #    profile-param-value-origin: <REPLACE_ME> - replace the new value required HERE
   #
   ac-02_odp.01:
-    values:
+    alt-identifier: ac-2_prm_1
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.02:
-    values:
+    alt-identifier: ac-2_prm_2
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.03:
-    values:
+    alt-identifier: ac-2_prm_3
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.04:
-    values:
+    alt-identifier: ac-2_prm_4
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.05:
-    values:
+    alt-identifier: ac-2_prm_5
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.06:
-    values:
+    alt-identifier: ac-2_prm_6
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.07:
-    values:
+    alt-identifier: ac-2_prm_7
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.08:
-    values:
+    alt-identifier: ac-2_prm_8
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.09:
-    values:
+    alt-identifier: ac-2_prm_9
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-02_odp.10:
-    values:
+    alt-identifier: ac-2_prm_10
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
 x-trestle-global:
   profile:
-    title: FedRAMP Rev 5 High Baseline - PaaS Profile
+    title: REPLACE_ME
   sort-id: ac-02
 ---
 

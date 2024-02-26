@@ -27,26 +27,51 @@ x-trestle-set-params:
   #    profile-param-value-origin: <REPLACE_ME> - replace the new value required HERE
   #
   sc-1_prm_1:
-    values:
+    aggregates:
+      - sc-01_odp.01
+      - sc-01_odp.02
+    profile-param-value-origin: <REPLACE_ME>
   sc-01_odp.01:
-    values:
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   sc-01_odp.02:
-    values:
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   sc-01_odp.03:
-    values:
+    alt-identifier: sc-1_prm_2
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   sc-01_odp.04:
-    values:
+    alt-identifier: sc-1_prm_3
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   sc-01_odp.05:
-    values:
+    alt-identifier: sc-1_prm_4
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   sc-01_odp.06:
-    values:
+    alt-identifier: sc-1_prm_5
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   sc-01_odp.07:
-    values:
+    alt-identifier: sc-1_prm_6
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   sc-01_odp.08:
-    values:
+    alt-identifier: sc-1_prm_7
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
 x-trestle-global:
   profile:
-    title: Example
+    title: REPLACE_ME
   sort-id: sc-01
 ---
 
