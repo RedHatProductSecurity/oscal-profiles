@@ -3,7 +3,7 @@
     "uuid": "82c60402-6acc-4e58-871f-4ce8d60a1317",
     "metadata": {
       "title": "REPLACE_ME",
-      "last-modified": "2024-02-26T14:32:21.117077+00:00",
+      "last-modified": "2024-02-26T14:34:43.045908+00:00",
       "version": "REPLACE_ME",
       "oscal-version": "1.0.4"
     },
@@ -18,6 +18,92 @@
         "method": "merge"
       },
       "as-is": true
+    },
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "ac-01_odp.03"
+        },
+        {
+          "param-id": "ac-01_odp.04"
+        },
+        {
+          "param-id": "ac-01_odp.05"
+        },
+        {
+          "param-id": "ac-01_odp.06"
+        },
+        {
+          "param-id": "ac-01_odp.07"
+        },
+        {
+          "param-id": "ac-01_odp.08"
+        },
+        {
+          "param-id": "ac-1_prm_1"
+        },
+        {
+          "param-id": "ac-02_odp.01"
+        },
+        {
+          "param-id": "ac-02_odp.02"
+        },
+        {
+          "param-id": "ac-02_odp.03"
+        },
+        {
+          "param-id": "ac-02_odp.04"
+        },
+        {
+          "param-id": "ac-02_odp.05"
+        },
+        {
+          "param-id": "ac-02_odp.06"
+        },
+        {
+          "param-id": "ac-02_odp.07"
+        },
+        {
+          "param-id": "ac-02_odp.08"
+        },
+        {
+          "param-id": "ac-02_odp.09"
+        },
+        {
+          "param-id": "ac-02_odp.10"
+        },
+        {
+          "param-id": "ac-04.04_odp.01"
+        },
+        {
+          "param-id": "ac-04.04_odp.02"
+        },
+        {
+          "param-id": "ac-04.04_odp.03"
+        },
+        {
+          "param-id": "sc-01_odp.03"
+        },
+        {
+          "param-id": "sc-01_odp.04"
+        },
+        {
+          "param-id": "sc-01_odp.05"
+        },
+        {
+          "param-id": "sc-01_odp.06"
+        },
+        {
+          "param-id": "sc-01_odp.07"
+        },
+        {
+          "param-id": "sc-01_odp.08"
+        },
+        {
+          "param-id": "sc-1_prm_1"
+        }
+      ],
+      "alters": []
     }
   }
 }
