@@ -26,35 +26,44 @@ x-trestle-set-params:
   #    param-value-origin: DO NOT REPLACE - this is the original value
   #    profile-param-value-origin: <REPLACE_ME> - replace the new value required HERE
   #
-  sc-05_odp.01:
-    values:
-  sc-05_odp.02:
-    values:
-  sc-05_odp.03:
-    values:
+  ac-04.04_odp.01:
+    alt-identifier: ac-4.4_prm_1
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-04.04_odp.02:
+    alt-identifier: ac-4.4_prm_2
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-04.04_odp.03:
+    alt-identifier: ac-4.4_prm_3
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
 x-trestle-global:
   profile:
-    title: FedRAMP Rev 5 High Baseline- SaaS Profile
-  sort-id: sc-05
+    title: REPLACE_ME
+  sort-id: ac-04.04
 ---
 
-# sc-5 - \[System and Communications Protection\] Denial-of-service Protection
+# ac-4.4 - \[Access Control\] Flow Control of Encrypted Information
 
 ## Control Statement
 
-- \[a.\] {{ insert: param, sc-05_odp.02 }} the effects of the following types of denial-of-service events: {{ insert: param, sc-05_odp.01 }} ; and
+Prevent encrypted information from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
 
-- \[b.\] Employ the following controls to achieve the denial-of-service objective: {{ insert: param, sc-05_odp.03 }}.
+- \[4_fr\]
+
+  - \[Requirement:\] The service provider must support Agency requirements to comply with M-21-31 (https://www.whitehouse.gov/wp-content/uploads/2021/08/M-21-31-Improving-the-Federal-Governments-Investigative-and-Remediation-Capabilities-Related-to-Cybersecurity-Incidents.pdf) and M-22-09 (https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf).
 
 ## Control Assessment Objective
 
-- \[SC-05a.\] the effects of {{ insert: param, sc-05_odp.01 }} are {{ insert: param, sc-05_odp.02 }};
-
-- \[SC-05b.\] {{ insert: param, sc-05_odp.03 }} are employed to achieve the denial-of-service protection objective.
+encrypted information is prevented from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
 
 ## Control guidance
 
-Denial-of-service events may occur due to a variety of internal and external causes, such as an attack by an adversary or a lack of planning to support organizational needs with respect to capacity and bandwidth. Such attacks can occur across a wide range of network protocols (e.g., IPv4, IPv6). A variety of technologies are available to limit or eliminate the origination and effects of denial-of-service events. For example, boundary protection devices can filter certain types of packets to protect system components on internal networks from being directly affected by or the source of denial-of-service attacks. Employing increased network capacity and bandwidth combined with service redundancy also reduces the susceptibility to denial-of-service events.
+Flow control mechanisms include content checking, security policy filters, and data type identifiers. The term encryption is extended to cover encoded data not recognized by filtering mechanisms.
 
 # Editable Content
 

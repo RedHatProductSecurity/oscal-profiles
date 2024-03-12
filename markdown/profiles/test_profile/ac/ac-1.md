@@ -27,26 +27,51 @@ x-trestle-set-params:
   #    profile-param-value-origin: <REPLACE_ME> - replace the new value required HERE
   #
   ac-1_prm_1:
-    values:
+    aggregates:
+      - ac-01_odp.01
+      - ac-01_odp.02
+    profile-param-value-origin: <REPLACE_ME>
   ac-01_odp.01:
-    values:
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-01_odp.02:
-    values:
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-01_odp.03:
-    values:
+    alt-identifier: ac-1_prm_2
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-01_odp.04:
-    values:
+    alt-identifier: ac-1_prm_3
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-01_odp.05:
-    values:
+    alt-identifier: ac-1_prm_4
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-01_odp.06:
-    values:
+    alt-identifier: ac-1_prm_5
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-01_odp.07:
-    values:
+    alt-identifier: ac-1_prm_6
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
   ac-01_odp.08:
-    values:
+    alt-identifier: ac-1_prm_7
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
 x-trestle-global:
   profile:
-    title: FedRAMP Rev 5 High Baseline - IaaS Profile
+    title: REPLACE_ME
   sort-id: ac-01
 ---
 
