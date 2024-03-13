@@ -60,6 +60,7 @@ jobs:
           git config --global --add safe.directory "${GITHUB_WORKSPACE}"
       - name: Update content
         uses: peter-evans/create-pull-request@v5.0.2
+        id: updates
         with:
           base: main
           branch: "oscal-update-${{ github.run_id }}"
@@ -76,3 +77,15 @@ jobs:
           add-paths: |
             "catalogs/${NIST_CATALOG_NAME}"
             "profiles/${FEDRAMP_PROFILE_NAME}"
+      - name: Regenerate profiles
+        if: ${{ steps.updates.outputs.pull-request-number }}
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.7.2
+        with:
+          markdown_path: "markdown/profiles"
+          oscal_model: "profile"
+          file_pattern: "markdown/*"
+          branch: "oscal-update-${{ github.run_id }}"
+          commit_message: Generating markdown changes [skip ci]
+          skip_assemble: true
+          commit_user_name: "trestle-bot[bot]"
+          commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
