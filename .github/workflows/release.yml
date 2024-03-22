@@ -48,6 +48,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: '${{ github.event.inputs.version }}',
-              name: 'v${{ github.event.inputs.version }}',
+              name: '${{ github.event.inputs.version }}',
               generate_release_notes: true,
             })
