@@ -3,8 +3,8 @@
     "uuid": "3f1e0c2a-3b3c-4be7-83e7-4365de56035a",
     "metadata": {
       "title": "FedRAMP Rev 5 High Baseline - IaaS Profile",
-      "last-modified": "2023-07-26T20:30:19.147227+00:00",
-      "version": "1.0",
+      "last-modified": "2024-03-22T19:23:36.011506+00:00",
+      "version": "v0.0.1",
       "oscal-version": "1.0.4"
     },
     "imports": [
