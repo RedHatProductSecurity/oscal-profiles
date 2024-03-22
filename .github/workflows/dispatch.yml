@@ -1,12 +1,8 @@
 name: Dispatch downstreams
 
 on:
-  workflow_call:
-  workflow_dispatch:
-  workflow_run:
-    workflows: [Regenerate profile content]
-    types:
-      - completed
+  release:
+    types: [published]
 
 jobs:
   dispatch:
@@ -28,6 +24,9 @@ jobs:
               owner: 'RedHatProductSecurity',
               repo: 'oscal-component-definitions',
               workflow_id: 'update-profiles.yml',
+              inputs: {
+                ref: '${{ github.event.release.tag_name }}'
+              },
               ref: 'main'
             })
         
