@@ -22,7 +22,7 @@ jobs:
     name: Create profile
     runs-on: ubuntu-latest
     container:
-      image: quay.io/continuouscompliance/trestle-bot:v0.7.0
+      image: quay.io/continuouscompliance/trestle-bot:v0.8.0
     steps:
       - name: Generate app token
         uses: tibdex/github-app-token@v2.1.0

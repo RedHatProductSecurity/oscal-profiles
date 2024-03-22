@@ -1,0 +1,53 @@
+name: Release content
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version'
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate app token
+        uses: tibdex/github-app-token@v2.1.0
+        id: get_installation_token
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+          permissions: >-
+            {"contents": "write"}
+      - name: Clone
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.get_installation_token.outputs.token }}
+      - name: Autosync
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.8.0
+        with:
+          markdown_path: "markdown/profiles"
+          oscal_model: "profile"
+          commit_message: "Update content for release [skip ci]"
+          skip_regenerate: true
+          commit_user_name: "trestle-bot[bot]"
+          commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
+          version: ${{ github.event.inputs.version }}
+      - name: Create and push tags
+        env:
+          VERSION: ${{ github.event.inputs.version }}
+        run: |
+            git tag "${VERSION}"
+            git push origin "${VERSION}"
+      - name: Create Release
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.get_installation_token.outputs.token }}
+          script: |
+            await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: '${{ github.event.inputs.version }}',
+              name: '${{ github.event.inputs.version }}',
+              generate_release_notes: true,
+            })
