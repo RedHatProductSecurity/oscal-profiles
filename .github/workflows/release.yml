@@ -30,6 +30,7 @@ jobs:
           oscal_model: "profile"
           commit_message: "Update content for release [skip ci]"
           skip_regenerate: true
+          file_pattern: "profiles/*/profile.json"
           commit_user_name: "trestle-bot[bot]"
           commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
           version: ${{ github.event.inputs.version }}
