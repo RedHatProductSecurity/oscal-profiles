@@ -79,7 +79,7 @@ jobs:
             "profiles/${FEDRAMP_PROFILE_NAME}"
       - name: Regenerate profiles
         if: ${{ steps.updates.outputs.pull-request-number }}
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.8.0
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.8.1
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
