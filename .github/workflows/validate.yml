@@ -22,13 +22,19 @@ jobs:
       - name: Clone
         uses: actions/checkout@v4
       - name: Check profile
-        id: check-profile
+        id: check
         uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.9.0
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
-          check_only: true
           skip_items: "fedramp_rev5_high"
+          dry_run: true
+      - name: Fail
+        if: ${{ steps.check.outputs.changes == 'true' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+              core.setFailed('Changes detected. Manual intervention may be required.')
     
   call-autosync:
     needs: [test]
