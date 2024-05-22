@@ -11,7 +11,7 @@ OSCAL Custom Profiles for testing with FedRAMP REV5 HIGH baseline profile.
 The workflow to update content consists of the following steps:
 
 1. From a user's branch, modify and commit a markdown or json file within the workspace. (Most updates will be made to markdown files.)
-2. A user submits a pull request to add their changes to the workspace's master branch.
+2. A user submits a pull request to add their changes to the workspace's main branch.
 3. From a user's branch, trestle-bot synchronizes the workspace content, validates it, and formats it. 
 4. The workspace updates are conditionally added to the workspace's main branch.
 
