@@ -11,16 +11,16 @@ Associated Workflows
 
 The `create-new` workflow is triggered manually by going to the Action tab. This creates a new OSCAL profile in the trestle workspace. A new branch is created and a pull request is opened.
 
-#### AutoFix
+#### Autosync content
 
 Associated Workflows
-- [autofix-profile.yml](../.github/workflows/autofix-profile.yml)
-- [manual-autofix.yml](../.github/workflows/manual-autofix.yml)
+- [autosync-profile.yml](../.github/workflows/autosync-profile.yml)
+- [manual-autosync.yml](../.github/workflows/manual-autosync.yml)
 - [validate.yml](../.github/workflows/validate.yml)
 
-The `validate` workflow is triggered when a pull request is created or updated with updates to component definitions. It validates the trestle workspace and automatically sync any difference between the OSCAL JSON files and trestle managed Markdown files. The same workflow can be triggered through the Action tab using the `Run autofix adhoc` workflow. The `autofix-profile.yml` has all common logic for both workflows. The `validate.yml` and `manual-autofix.yml` workflows adds customer triggers and logic.
+The `validate` workflow is triggered when a pull request is created or updated with updates to component definitions. It validates the trestle workspace and automatically sync any difference between the OSCAL JSON files and trestle managed Markdown files. The same workflow can be triggered through the Action tab using the `Run autosync adhoc` workflow. The `autosync-profile.yml` has all common logic for both workflows. The `validate.yml` and `manual-autosync.yml` workflows adds customer triggers and logic.
 
-The `validate` workflow will run checks with read-only permissions when a pull request is opened from a from a fork, but the autofix workflow will not run.
+The `validate` workflow will run checks with read-only permissions when a pull request is opened from a from a fork, but the autosync workflow will not run.
 
 #### Update Profile
 

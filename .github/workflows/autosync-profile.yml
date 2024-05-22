@@ -1,4 +1,4 @@
-name: Profile Autofix
+name: Profile autosync
 
 on:
   workflow_call:
@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   auto-update:
-    name: Autofix profile content
+    name: autosync profile content
     runs-on: ubuntu-latest
     steps:
       - name: Generate app token
@@ -29,8 +29,8 @@ jobs:
         with:
           ref: ${{ inputs.branch }}
           token: ${{ steps.get_installation_token.outputs.token }}
-      - name: Autofix profile
-        id: autofix-profile
+      - name: autosync profile
+        id: autosync-profile
         uses: RedHatProductSecurity/trestle-bot/actions/autosync@v0.8.0
         with:
           markdown_path: "markdown/profiles"

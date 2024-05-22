@@ -30,12 +30,12 @@ jobs:
           check_only: true
           skip_items: "fedramp_rev5_high"
     
-  call-autofix:
+  call-autosync:
     needs: [test]
     if: |
       always() && contains(needs.*.result, 'failure')
       && github.event.pull_request.base.repo.url == github.event.pull_request.head.repo.url
-    uses: ./.github/workflows/autofix-profile.yml
+    uses: ./.github/workflows/autosync-profile.yml
     with:
       branch: ${{ github.head_ref }}
     secrets: inherit
