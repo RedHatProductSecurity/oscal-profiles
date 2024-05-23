@@ -4,71 +4,64 @@ OSCAL Custom Profiles for testing with FedRAMP REV5 HIGH baseline profile.
 
 > WARNING: Cloud Service Model derived profiles are experimental and have not been validated. 
 
-## Directory Structure
+## Getting Started
 
-### Content Managed by Automation
+### Update Existing Content
+#### Overview
+The workflow to update content consists of the following steps:
 
-Some the directories in this repository are managed through automated processes such as make targets or GitHub Actions.
+1. From a user's branch, modify and commit a markdown or json file within the workspace. (Most updates will be made to markdown files.)
+2. A user submits a pull request to add their changes to the workspace's main branch.
+3. From a user's branch, trestle-bot synchronizes the workspace content, validates it, and formats it. 
+4. The workspace updates are conditionally added to the workspace's main branch.
 
-- catalogs: This stores OSCAL Catalogs installed in the trestle workspace.
-- profiles (FedRAMP only) - This stores OSCAL Profiles installed in the trestle workspace.
+
+#### Step 1: Create and switch to a new branch
+The first step in modifying content is to [create a new branch](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository) of the workspace to save your work to.
+
+#### Step 2: Locate content
+ Once you've created a branch, locate the content to be modified within the workspace. JSON and markdown files can be found in the following places:
+- `./markdown/profiles/`
+- `./profiles/`
 
 
-For information on how this data is managed, see the [FAQs](./docs/faqs.md).
+#### Step 3: Modify content
+Browse to the referenced file. Follow your Git Provider's instructions for committing changes to a file.
+- [GitHub](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository)
 
-### Content Managed by Control Owner (i.e. managed directly in this repository)
-- markdown - This stores profile information that can be edited directly.
-- profiles - This stores custom OSCAL Profile JSON installed in the trestle workspace.
-- scripts - This stores bash scripts for automation tasks unique to this repository.
 
-## Workflow
+#### Step 4: Open A pull request
+Once the needed modifications have been performed, request to publish the changes by opening a pull request to merge your changes into the workspace's main branch.
 
-The below diagram depict the event-driven pull-based strategy used to update the content in this repository.
+- [GitHub](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
 
-```mermaid
-graph LR
-    subgraph Trestle_Workspace
-        Catalogs(Catalogs)
-        Profiles(Profiles)
-        Upstream_Profiles(Upstream Profiles)
-    end
-    subgraph External Sources
-        Official_Catalogs_Profiles(Official OSCAL Catalogs and Profiles)
-    end
-    subgraph GitHub Actions
-        Catalog_Profile_Import(Catalog/Profile Import)
-        subgraph Trestle Bot
-            Commit(Commit)
-            Create_Pull_Request(Create Pull Request)
-            Sync_Profiles(Sync Profiles with Catalogs)
-            Sync_Profiles_P(Sync Profiles with Upstream Profiles)
-        end
-    end
-    subgraph Review and Approval
-        Pull_Request(Pull Request)
-    end
-    Person(Person)
 
-    Official_Catalogs_Profiles --> Catalog_Profile_Import
-    Catalog_Profile_Import --> A{Content Updates?}
-    A -- Yes --> Commit
-    Commit --> Create_Pull_Request
-    Create_Pull_Request --> Person
-    A -- No --> B[End]
-    Sync_Profiles -- Catalog Content --> A
-    Sync_Profiles_P -- Profile Content --> A
-    Pull_Request -- Merge --> Catalogs
-    Pull_Request -- Merge --> Profiles
-    Pull_Request -- Merge --> Upstream_Profiles
-    Catalogs -- Workflow Dispatched --> Sync_Profiles
-    Upstream_Profiles -- Workflow Dispatched --> Sync_Profiles_P
-    Person -- Review --> Pull_Request
-    Person -- Approve --> Pull_Request
-    Profiles --> B
-```
+#### Step 5: Approve and merge pull request
+Once trestle-bot has processed the workspace modifications, the pull request can be conditionally approved, which triggers the publishing of the changes to the workspace's main branch.
 
-### Current Limitations:
+- [GitHub](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/approving-a-pull-request-with-required-reviews)
 
-- Catalogs and profiles currently have to be synced by manually executing a GitHub Action workflow.
 
-To complete work from a fork, local automation is available. To see the available make targets, use `make help`. For information on how to edit the content in this repository, see the [tutorial](./docs/tutorial.md).
+### Creating new content
+#### Overview
+The workflow to create a new Profile consists of the following steps:
+
+1. Using the GitHub UI, complete a create new profile form and submit it to trestle-bot.
+2. trestle-bot processes the form and creates a new profile within the workspace.
+3. trestle-bot opens a pull request to add the new profile to the workspace's main branch.
+4. The workspace updates are conditionally added to the workspace's main branch.
+
+
+#### Step 1: Kickoff a workflow
+Use your git provider's UI to kickoff a workflow, by browsing to the workspace's available workflows and selecting the `Profile Create` workflow. Enter the required information and submit the form to run the workflow.
+[GitHub](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow)
+
+
+#### Step 2: Approve and merge pull request
+Once trestle-bot has processed the workspace modifications, the pull request can be conditionally approved, which triggers the publishing of the changes to the workspace's main branch.
+
+- [GitHub](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/approving-a-pull-request-with-required-reviews)
+
+## FAQs and Infrequent Tasks
+
+See [FAQs and Infrequent Tasks](./docs/faqs.md) for more information.
