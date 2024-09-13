@@ -3,8 +3,8 @@
     "uuid": "7bd0c149-c1ce-4278-8709-84d8585af4ce",
     "metadata": {
       "title": "Example",
-      "last-modified": "2024-03-22T19:23:37.644864+00:00",
-      "version": "v0.0.1",
+      "last-modified": "2024-09-13T22:51:36.921424+00:00",
+      "version": "0.0.2",
       "oscal-version": "1.0.4"
     },
     "imports": [
